@@ -1,0 +1,44 @@
+Bootstrap: localimage
+From: ubuntu:22.04
+
+%labels
+    Author OmicsFlow
+    Version 1.0.0
+    Description CNV Analysis Container for OmicsFlow
+    License MIT
+
+%environment
+    export PATH=/opt/cnvkit/bin:$PATH
+    export LC_ALL=C
+
+%post
+    echo "Installing CNVkit and dependencies..."
+
+    export DEBIAN_FRONTEND=noninteractive
+
+    apt-get update && apt-get install -y --no-install-recommends \
+        python3.10 \
+        python3-pip \
+        python3-dev \
+        build-essential \
+        libbz2-dev \
+        liblzma-dev \
+        libsqlite3-dev \
+        wget \
+        curl \
+        && rm -rf /var/lib/apt/lists/*
+
+    pip3 install --no-cache-dir \
+        cnvkit==0.9.9 \
+        numpy==1.26.0 \
+        scipy==1.11.0 \
+        pandas==2.1.0 \
+        matplotlib==3.8.0 \
+        seaborn==0.13.0
+
+    mkdir -p /opt/cnvkit/bin
+
+    echo "CNVkit installation complete"
+
+%runscript
+    exec cnvkit "$@"

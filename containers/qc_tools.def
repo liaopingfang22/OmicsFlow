@@ -1,0 +1,33 @@
+Bootstrap: localimage
+From: ubuntu:22.04
+
+%labels
+    Author OmicsFlow
+    Version 1.0.0
+    Description NGS QC Container for OmicsFlow
+    License MIT
+
+%environment
+    export LC_ALL=C
+
+%post
+    echo "Installing QC tools..."
+
+    export DEBIAN_FRONTEND=noninteractive
+
+    apt-get update && apt-get install -y --no-install-recommends \
+        default-jre \
+        python3.10 \
+        python3-pip \
+        libpng-dev \
+        libjpeg-dev \
+        zlib1g-dev \
+        && rm -rf /var/lib/apt/lists/*
+
+    pip3 install --no-cache-dir \
+        fastqc==0.12.1 \
+        multiqc==1.21 \
+        cutadapt==4.7 \
+        trim-galore==0.6.7
+
+    echo "QC tools installation complete"

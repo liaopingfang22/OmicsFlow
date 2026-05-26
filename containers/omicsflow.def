@@ -1,0 +1,74 @@
+Bootstrap: localimage
+From: ubuntu:22.04
+
+%labels
+    Author OmicsFlow Team
+    Version 1.0.0
+    Description BioSkills based bioinformatics analysis platform
+    License MIT
+
+%environment
+    export LC_ALL=C
+    export PATH=/opt/omicsflow/bin:$PATH
+    export NXF_SINGULARITY_CACHEDIR=/data/singularity
+    export SINGULARITY_CACHEDIR=/data/singularity
+
+%files
+    ../workflows /opt/omicsflow/workflows
+    ../modules /opt/omicsflow/modules
+    ../skills /opt/omicsflow/skills
+
+%post
+    echo "=========================================="
+    echo " Installing OmicsFlow Dependencies"
+    echo "=========================================="
+
+    export DEBIAN_FRONTEND=noninteractive
+    export LC_ALL=C
+
+    apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
+        curl \
+        git \
+        wget \
+        vim \
+        zip \
+        unzip \
+        python3.10 \
+        python3.10-dev \
+        python3-pip \
+        libpq-dev \
+        && rm -rf /var/lib/apt/lists/*
+
+    ln -sf /usr/bin/python3.10 /usr/bin/python3
+    ln -sf /usr/bin/python3 /usr/bin/python
+
+    curl -s https://get.nextflow.io | bash
+    mv nextflow /opt/omicsflow/bin/
+    chmod +x /opt/omicsflow/bin/nextflow
+
+    pip3 install --no-cache-dir \
+        fastapi==0.109.0 \
+        uvicorn[standard]==0.27.0 \
+        pydantic==2.5.0 \
+        pydantic-settings==2.1.0 \
+        sqlalchemy==2.0.25 \
+        asyncpg==0.29.0 \
+        python-multipart==0.0.6 \
+        aiofiles==23.2.1 \
+        httpx==0.26.0 \
+        redis==5.0.1 \
+        python-jose[cryptography]==3.3.0 \
+        passlib[bcrypt]==1.7.4 \
+        numpy==1.26.0 \
+        pandas==2.1.0 \
+        biopython==1.83
+
+    mkdir -p /data/output /data/storage /data/singularity /opt/omicsflow/workflows /opt/omicsflow/modules
+
+    echo "=========================================="
+    echo " OmicsFlow installation complete"
+    echo "=========================================="
+
+%startscript
+    echo "Starting OmicsFlow services..."

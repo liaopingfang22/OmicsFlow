@@ -1,0 +1,44 @@
+Bootstrap: localimage
+From: ubuntu:22.04
+
+%labels
+    Author OmicsFlow
+    Version 1.0.0
+    Description R/Bioconductor Container for OmicsFlow
+    License MIT
+
+%environment
+    export R_LIBS_USER=/opt/R/library
+    export LC_ALL=C
+
+%post
+    echo "Installing R and Bioconductor packages..."
+
+    export DEBIAN_FRONTEND=noninteractive
+
+    apt-get update && apt-get install -y --no-install-recommends \
+        r-base=4.3.1 \
+        r-base-dev=4.3.1 \
+        libcurl4-openssl-dev \
+        libssl-dev \
+        libxml2-dev \
+        libharfbuzz-dev \
+        libfribidi-dev \
+        libfontconfig1-dev \
+        libfreetype6-dev \
+        libpng-dev \
+        libtiff5-dev \
+        libjpeg-dev \
+        libcairo2-dev \
+        && rm -rf /var/lib/apt/lists/*
+
+    mkdir -p /opt/R/library
+
+    R --vanilla --quiet << 'EOF'
+    if (!require("BiocManager")) install.packages("BiocManager", repos="https://cran.rstudio.com/")
+    BiocManager::install(c("edgeR", "DESeq2", "limma", "org.Hs.eg.db"), update=FALSE, ask=FALSE)
+    install.packages(c("ggplot2", "ggrepel", "ggpubr", "pheatmap"), repos="https://cran.rstudio.com/")
+    q()
+    EOF
+
+    echo "R/Bioconductor installation complete"

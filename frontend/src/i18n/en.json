@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "description": "OmicsFlow i18n translations",
+    "version": "1.0.0"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "sequencers": "Sequencers",
+    "pipelines": "Pipelines",
+    "tasks": "Tasks",
+    "datasets": "Datasets",
+    "users": "User Management",
+    "logout": "Logout"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "total_tasks": "Total Tasks",
+    "available_pipelines": "Available Pipelines",
+    "recent_tasks": "Recent Tasks",
+    "no_pipelines": "No pipelines available",
+    "no_tasks": "No tasks yet"
+  },
+  "sequencer": {
+    "title": "Sequencer Management",
+    "register": "Register Sequencer",
+    "name": "Name",
+    "model": "Model",
+    "location": "Location",
+    "data_dir": "Data Directory",
+    "scan": "Scan New Data",
+    "scanning": "Scanning...",
+    "no_sequencers": "No sequencers registered"
+  },
+  "pipeline": {
+    "title": "Pipelines",
+    "create": "New Pipeline",
+    "name": "Name",
+    "type": "Type",
+    "description": "Description",
+    "delete_confirm": "Are you sure you want to delete this pipeline?"
+  },
+  "task": {
+    "title": "Tasks",
+    "create": "New Task",
+    "run": "Run",
+    "pending": "Pending",
+    "running": "Running",
+    "completed": "Completed",
+    "failed": "Failed",
+    "cancelled": "Cancelled"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  }
+}

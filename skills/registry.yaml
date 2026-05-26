@@ -1,0 +1,3339 @@
+bio-admet-prediction:
+  category: chemoinformatics
+  description: Predicts ADMET properties using ADMETlab 3.0 API or DeepChem models.
+    Estimates bioavailability, CYP inhibition, hERG liability, and 119 toxicity endpoints
+    with uncertainty quantification. Filters for PAINS and other structural alerts.
+    Use when filtering compounds for drug-likeness or prioritizing leads by predicted
+    safety.
+  subcategory: admet-prediction
+  version: '1.0'
+bio-alignment-files-bam-statistics:
+  category: alignment-files
+  description: Generate alignment statistics using samtools flagstat, stats, depth,
+    and coverage. Use when assessing alignment quality, calculating coverage, or generating
+    QC reports.
+  subcategory: bam-statistics
+  version: '1.0'
+bio-alignment-filtering:
+  category: alignment-files
+  description: Filter alignments by flags, mapping quality, and regions using samtools
+    view and pysam. Use when extracting specific reads, removing low-quality alignments,
+    or subsetting to target regions.
+  subcategory: alignment-filtering
+  version: '1.0'
+bio-alignment-indexing:
+  category: alignment-files
+  description: Create and use BAI/CSI indices for BAM/CRAM files using samtools and
+    pysam. Use when enabling random access to alignment files or fetching specific
+    genomic regions.
+  subcategory: alignment-indexing
+  version: '1.0'
+bio-alignment-io:
+  category: alignment
+  description: Read, write, and convert multiple sequence alignment files using Biopython
+    Bio.AlignIO. Supports Clustal, PHYLIP, Stockholm, FASTA, Nexus, and other alignment
+    formats for phylogenetics and conservation analysis. Use when reading, writing,
+    or converting alignment file formats.
+  subcategory: alignment-io
+  version: '1.0'
+bio-alignment-msa-parsing:
+  category: alignment
+  description: Parse and analyze multiple sequence alignments using Biopython. Extract
+    sequences, identify conserved regions, analyze gaps, work with annotations, and
+    manipulate alignment data for downstream analysis. Use when parsing or manipulating
+    multiple sequence alignments.
+  subcategory: msa-parsing
+  version: '1.0'
+bio-alignment-msa-statistics:
+  category: alignment
+  description: Calculate alignment statistics including sequence identity, conservation
+    scores, substitution matrices, and similarity metrics. Use when comparing alignment
+    quality, measuring sequence divergence, and analyzing evolutionary patterns.
+  subcategory: msa-statistics
+  version: '1.0'
+bio-alignment-multiple:
+  category: alignment
+  description: Perform multiple sequence alignment using MAFFT, MUSCLE5, ClustalOmega,
+    or T-Coffee. Guides tool and algorithm selection based on dataset size, sequence
+    divergence, and downstream application. Use when aligning three or more homologous
+    sequences for phylogenetics, conservation analysis, or evolutionary studies.
+  subcategory: multiple-alignment
+  version: '1.0'
+bio-alignment-pairwise:
+  category: alignment
+  description: Perform pairwise sequence alignment using Biopython Bio.Align.PairwiseAligner.
+    Use when comparing two sequences, finding optimal alignments, scoring similarity,
+    and identifying local or global matches between DNA, RNA, or protein sequences.
+  subcategory: pairwise-alignment
+  version: '1.0'
+bio-alignment-sorting:
+  category: alignment-files
+  description: Sort alignment files by coordinate or read name using samtools and
+    pysam. Use when preparing BAM files for indexing, variant calling, or paired-end
+    analysis.
+  subcategory: alignment-sorting
+  version: '1.0'
+bio-alignment-validation:
+  category: alignment-files
+  description: Validate alignment quality with insert size distribution, proper pairing
+    rates, GC bias, strand balance, and other post-alignment metrics. Use when verifying
+    alignment data quality before variant calling or quantification.
+  subcategory: alignment-validation
+  version: '1.0'
+bio-atac-seq-atac-peak-calling:
+  category: atac-seq
+  description: Call accessible chromatin regions from ATAC-seq data using MACS3 with
+    ATAC-specific parameters. Use when identifying open chromatin regions from aligned
+    ATAC-seq BAM files, different from ChIP-seq peak calling.
+  subcategory: atac-peak-calling
+  version: '1.0'
+bio-atac-seq-atac-qc:
+  category: atac-seq
+  description: Quality control metrics for ATAC-seq data including fragment size distribution,
+    TSS enrichment, FRiP, and library complexity. Use when assessing ATAC-seq library
+    quality before or after peak calling to identify problematic samples.
+  subcategory: atac-qc
+  version: '1.0'
+bio-atac-seq-differential-accessibility:
+  category: atac-seq
+  description: Find differentially accessible chromatin regions between conditions
+    using DiffBind or DESeq2. Use when comparing chromatin accessibility between treatment
+    groups, cell types, or developmental stages in ATAC-seq experiments.
+  subcategory: differential-accessibility
+  version: '1.0'
+bio-atac-seq-footprinting:
+  category: atac-seq
+  description: Detect transcription factor binding sites through footprinting analysis
+    in ATAC-seq data using TOBIAS. Use when identifying TF occupancy patterns within
+    accessible regions, as TF binding protects DNA from Tn5 cutting.
+  subcategory: footprinting
+  version: '1.0'
+bio-atac-seq-motif-deviation:
+  category: atac-seq
+  description: Analyze transcription factor motif accessibility variability using
+    chromVAR. Use when identifying which TF motifs show variable accessibility across
+    samples or conditions in ATAC-seq data.
+  subcategory: motif-deviation
+  version: '1.0'
+bio-atac-seq-nucleosome-positioning:
+  category: atac-seq
+  description: Extract nucleosome positions from ATAC-seq data using NucleoATAC, ATACseqQC,
+    and fragment analysis. Use when analyzing chromatin organization, identifying
+    nucleosome-free regions at promoters, or characterizing nucleosome occupancy patterns
+    from ATAC-seq fragment size distributions.
+  subcategory: nucleosome-positioning
+  version: '1.0'
+bio-basecalling:
+  category: long-read-sequencing
+  description: 'Convert raw Nanopore signal data (FAST5/POD5) to nucleotide sequences
+    using Dorado basecaller. Covers model selection, GPU acceleration, modified base
+    detection, and quality filtering. Use when processing raw Nanopore data before
+    alignment. Note: Guppy is deprecated; use Dorado for all new analyses.'
+  subcategory: basecalling
+  version: '1.0'
+bio-batch-downloads:
+  category: database-access
+  description: Download large datasets from NCBI efficiently using history server,
+    batching, and rate limiting. Use when performing bulk sequence downloads, handling
+    large query results, or production-scale data retrieval.
+  subcategory: batch-downloads
+  version: '1.0'
+bio-batch-processing:
+  category: sequence-io
+  description: Process multiple sequence files in batch using Biopython. Use when
+    working with many files, merging/splitting sequences, or automating file operations
+    across directories.
+  subcategory: batch-processing
+  version: '1.0'
+bio-bedgraph-handling:
+  category: genome-intervals
+  description: Create, manipulate, and convert bedGraph files for genome browser visualization.
+    Covers bedGraph format, conversion to/from bigWig, normalization, and signal processing.
+    Use when handling coverage and signal tracks from ChIP-seq, ATAC-seq, or RNA-seq.
+  subcategory: bedgraph-handling
+  version: '1.0'
+bio-blast-searches:
+  category: database-access
+  description: Run remote BLAST searches against NCBI databases using Biopython Bio.Blast.
+    Use when identifying unknown sequences, finding homologs, or searching for sequence
+    similarity against NCBI's nr/nt databases.
+  subcategory: blast-searches
+  version: '1.0'
+bio-causal-genomics-colocalization-analysis:
+  category: causal-genomics
+  description: Test whether two traits share a causal variant at a genomic locus using
+    Bayesian colocalization with coloc. Computes posterior probabilities for shared
+    vs distinct causal variants between GWAS and eQTL signals. Use when determining
+    if a GWAS signal and an eQTL share the same causal variant.
+  subcategory: colocalization-analysis
+  version: '1.0'
+bio-causal-genomics-fine-mapping:
+  category: causal-genomics
+  description: Identify likely causal variants within GWAS loci using SuSiE for sum
+    of single effects regression and FINEMAP for shotgun stochastic search. Computes
+    posterior inclusion probabilities and credible sets to prioritize variants for
+    functional follow-up. Use when narrowing GWAS association signals to candidate
+    causal variants or building credible sets for functional validation.
+  subcategory: fine-mapping
+  version: '1.0'
+bio-causal-genomics-mediation-analysis:
+  category: causal-genomics
+  description: Decompose genetic effects into direct and indirect paths through mediating
+    variables using the mediation R package. Tests whether gene expression, methylation,
+    or other molecular phenotypes mediate the effect of genetic variants on disease.
+    Use when testing whether a molecular phenotype mediates the genotype-to-phenotype
+    relationship.
+  subcategory: mediation-analysis
+  version: '1.0'
+bio-causal-genomics-mendelian-randomization:
+  category: causal-genomics
+  description: Estimate causal effects between exposures and outcomes using genetic
+    variants as instrumental variables with TwoSampleMR. Implements IVW, MR-Egger,
+    weighted median, and MR-PRESSO methods for robust causal inference from GWAS summary
+    statistics. Use when testing whether an exposure causally affects an outcome using
+    genetic instruments.
+  subcategory: mendelian-randomization
+  version: '1.0'
+bio-causal-genomics-pleiotropy-detection:
+  category: causal-genomics
+  description: Detect and correct for horizontal pleiotropy in Mendelian randomization
+    analyses using MR-PRESSO for outlier removal, MR-Egger regression for directional
+    pleiotropy, and Steiger filtering for variant directionality. Use when validating
+    MR results, detecting pleiotropic instruments, or running sensitivity analyses
+    for causal inference.
+  subcategory: pleiotropy-detection
+  version: '1.0'
+bio-cfdna-preprocessing:
+  category: liquid-biopsy
+  description: Preprocesses cell-free DNA sequencing data including adapter trimming,
+    alignment optimized for short fragments, and UMI-aware duplicate removal using
+    fgbio. Applies cfDNA-specific quality thresholds and fragment length filtering.
+    Use when processing plasma cfDNA sequencing data before downstream analysis.
+  subcategory: cfdna-preprocessing
+  version: '1.0'
+bio-chipseq-differential-binding:
+  category: chip-seq
+  description: Identifies differentially bound ChIP-seq regions between conditions
+    using DiffBind (from BAMs), DESeq2, or PyDESeq2 (from count matrices). Handles
+    normalization, statistical testing, and fold-change estimation with ChIP-seq-specific
+    considerations. Use when comparing ChIP-seq binding between experimental conditions.
+  subcategory: differential-binding
+  version: '1.0'
+bio-chipseq-motif-analysis:
+  category: chip-seq
+  description: De novo motif discovery and known motif enrichment analysis using HOMER
+    and MEME-ChIP. Identify transcription factor binding motifs in ChIP-seq, ATAC-seq,
+    or other genomic peak data. Use when finding enriched DNA motifs in peak sequences.
+  subcategory: motif-analysis
+  version: '1.0'
+bio-chipseq-peak-annotation:
+  category: chip-seq
+  description: Annotate ChIP-seq peaks to genomic features and nearest genes. Classify
+    peaks as promoter, exon, intron, or intergenic using ChIPseeker (R), HOMER annotatePeaks.pl
+    (CLI), or Python (pandas/pyranges). Supports pre-built annotation databases and
+    custom GTF files. Handles promoter definition, feature priority, category collapsing,
+    and signed distance-to-TSS. Use when assigning genomic context to ChIP-seq peaks
+    or linking peaks to target genes.
+  subcategory: peak-annotation
+  version: '1.0'
+bio-chipseq-peak-calling:
+  category: chip-seq
+  description: ChIP-seq peak calling using MACS3 and HOMER findPeaks. Call narrow
+    peaks for transcription factors or broad peaks for histone modifications. Supports
+    single-caller and multi-caller consensus approaches, input control, fragment size
+    modeling, and various output formats. Use when calling peaks from ChIP-seq alignments.
+  subcategory: peak-calling
+  version: '1.0'
+bio-chipseq-qc:
+  category: chip-seq
+  description: ChIP-seq quality control metrics including FRiP (Fraction of Reads
+    in Peaks), cross-correlation analysis (NSC/RSC), library complexity, and IDR (Irreproducibility
+    Discovery Rate) for replicate concordance. Use to assess experiment quality before
+    downstream analysis. Use when assessing ChIP-seq data quality metrics.
+  subcategory: chipseq-qc
+  version: '1.0'
+bio-chipseq-super-enhancers:
+  category: chip-seq
+  description: Identifies super-enhancers from H3K27ac ChIP-seq data using ROSE and
+    related tools. Use when studying cell identity genes, cancer-associated regulatory
+    elements, or master transcription factor binding regions that cluster into large
+    enhancer domains.
+  subcategory: super-enhancers
+  version: '1.0'
+bio-chipseq-visualization:
+  category: chip-seq
+  description: Visualize ChIP-seq data using deepTools, Gviz, and ChIPseeker. Create
+    heatmaps, profile plots, and genome browser tracks. Visualize signal around peaks,
+    TSS, or custom regions. Use when visualizing ChIP-seq signal and peaks.
+  subcategory: chipseq-visualization
+  version: '1.0'
+bio-clinical-biostatistics-categorical-tests:
+  category: clinical-biostatistics
+  description: Tests associations between categorical variables in clinical data using
+    chi-square, Fisher's exact, and Cochran-Mantel-Haenszel tests. Computes effect
+    sizes and post-hoc pairwise comparisons. Use when analyzing categorical outcomes
+    or testing treatment-outcome independence in clinical trials.
+  subcategory: categorical-tests
+  version: '1.0'
+bio-clinical-biostatistics-cdisc-data:
+  category: clinical-biostatistics
+  description: Reads and prepares CDISC SDTM clinical trial data for analysis. Handles
+    domain tables (DM, AE, EX, VS, LB), USUBJID-based joins, event-to-subject aggregation,
+    and SUPPQUAL pivoting. Use when working with clinical trial datasets in CDISC/SDTM
+    format or .xpt files.
+  subcategory: cdisc-data-handling
+  version: '1.0'
+bio-clinical-biostatistics-effect-measures:
+  category: clinical-biostatistics
+  description: Computes and interprets treatment effect measures including odds ratios,
+    risk ratios, number needed to treat, and confidence intervals from clinical trial
+    data. Covers crude and adjusted measures, non-collapsibility of odds ratios, and
+    forest plot visualization. Use when reporting treatment effects or comparing effect
+    sizes across clinical studies.
+  subcategory: effect-measures
+  version: '1.0'
+bio-clinical-biostatistics-logistic-regression:
+  category: clinical-biostatistics
+  description: Performs logistic regression for clinical trial outcomes including
+    binary, ordinal, and multinomial models. Extracts odds ratios with confidence
+    intervals, handles covariate adjustment, and provides Firth penalized regression
+    for rare events or separation. Use when modeling binary or ordinal endpoints from
+    clinical data.
+  subcategory: logistic-regression
+  version: '1.0'
+bio-clinical-biostatistics-subgroup-analysis:
+  category: clinical-biostatistics
+  description: Performs stratified and subgroup analyses for clinical trial data.
+    Covers Mantel-Haenszel pooling, Breslow-Day homogeneity testing, interaction terms
+    in regression, multiple comparisons correction, and forest plot visualization.
+    Use when analyzing treatment effects across patient subgroups or controlling for
+    stratification variables.
+  subcategory: subgroup-analysis
+  version: '1.0'
+bio-clinical-biostatistics-trial-reporting:
+  category: clinical-biostatistics
+  description: Prepares statistical tables and reports for clinical trials following
+    regulatory standards. Generates Table 1 baseline characteristics, defines analysis
+    populations (ITT, per-protocol, safety), performs multiple imputation for missing
+    data, and follows CONSORT and ICH E9 guidelines. Use when creating analysis reports,
+    handling missing data, or preparing regulatory submissions from clinical trials.
+  subcategory: trial-reporting
+  version: '1.0'
+bio-clinical-databases-clinvar-lookup:
+  category: clinical-databases
+  description: Query ClinVar for variant pathogenicity classifications, review status,
+    and disease associations via REST API or local VCF. Use when determining clinical
+    significance of variants for diagnostic or research purposes.
+  subcategory: clinvar-lookup
+  version: '1.0'
+bio-clinical-databases-dbsnp-queries:
+  category: clinical-databases
+  description: Query dbSNP for rsID lookups, variant annotations, and cross-references
+    to other databases. Use when mapping between rsIDs and genomic coordinates or
+    retrieving basic variant information.
+  subcategory: dbsnp-queries
+  version: '1.0'
+bio-clinical-databases-gnomad-frequencies:
+  category: clinical-databases
+  description: Query gnomAD for population allele frequencies to assess variant rarity.
+    Use when filtering variants by population frequency for rare disease analysis
+    or determining if a variant is common in the general population.
+  subcategory: gnomad-frequencies
+  version: '1.0'
+bio-clinical-databases-hla-typing:
+  category: clinical-databases
+  description: Call HLA alleles from NGS data using OptiType, HLA-HD, or arcasHLA
+    for immunogenomics applications. Use when determining HLA genotype for transplant
+    matching, neoantigen prediction, or pharmacogenomic screening.
+  subcategory: hla-typing
+  version: '1.0'
+bio-clinical-databases-myvariant-queries:
+  category: clinical-databases
+  description: Query myvariant.info API for aggregated variant annotations from multiple
+    databases (ClinVar, gnomAD, dbSNP, COSMIC, etc.) in a single request. Use when
+    annotating variants with clinical and population data from multiple sources simultaneously.
+  subcategory: myvariant-queries
+  version: '1.0'
+bio-clinical-databases-pharmacogenomics:
+  category: clinical-databases
+  description: Query PharmGKB and CPIC for drug-gene interactions, pharmacogenomic
+    annotations, and dosing guidelines. Use when predicting drug response from genetic
+    variants or implementing clinical pharmacogenomics.
+  subcategory: pharmacogenomics
+  version: '1.0'
+bio-clinical-databases-polygenic-risk:
+  category: clinical-databases
+  description: Calculate polygenic risk scores using PRSice-2, LDpred2, or PRS-CS
+    from GWAS summary statistics. Use when predicting disease risk from genome-wide
+    genetic variants.
+  subcategory: polygenic-risk
+  version: '1.0'
+bio-clinical-databases-somatic-signatures:
+  category: clinical-databases
+  description: Extract and analyze mutational signatures from somatic variants using
+    SigProfiler or MutationalPatterns to characterize mutagenic processes. Use when
+    identifying DNA damage mechanisms or etiology in cancer genomes.
+  subcategory: somatic-signatures
+  version: '1.0'
+bio-clinical-databases-tumor-mutational-burden:
+  category: clinical-databases
+  description: Calculate tumor mutational burden from panel or WES data with proper
+    normalization and clinical thresholds. Use when assessing immunotherapy eligibility
+    or characterizing tumor immunogenicity.
+  subcategory: tumor-mutational-burden
+  version: '1.0'
+bio-clinical-databases-variant-prioritization:
+  category: clinical-databases
+  description: Filter and prioritize variants by pathogenicity, population frequency,
+    and clinical evidence for rare disease analysis. Use when identifying candidate
+    disease-causing variants from exome or genome sequencing.
+  subcategory: variant-prioritization
+  version: '1.0'
+bio-clip-seq-binding-site-annotation:
+  category: clip-seq
+  description: Annotate CLIP-seq binding sites to genomic features including 3'UTR,
+    5'UTR, CDS, introns, and ncRNAs. Use when characterizing where an RBP binds in
+    transcripts.
+  subcategory: binding-site-annotation
+  version: '1.0'
+bio-clip-seq-clip-alignment:
+  category: clip-seq
+  description: Align CLIP-seq reads to the genome with crosslink site awareness. Use
+    when mapping preprocessed CLIP reads for peak calling.
+  subcategory: clip-alignment
+  version: '1.0'
+bio-clip-seq-clip-motif-analysis:
+  category: clip-seq
+  description: Identify enriched sequence motifs at CLIP-seq binding sites for RBP
+    binding specificity. Use when characterizing the sequence preferences of an RNA-binding
+    protein.
+  subcategory: clip-motif-analysis
+  version: '1.0'
+bio-clip-seq-clip-peak-calling:
+  category: clip-seq
+  description: Call protein-RNA binding site peaks from CLIP-seq data using CLIPper,
+    PureCLIP, or Piranha. Use when identifying RBP binding sites from aligned CLIP
+    reads.
+  subcategory: clip-peak-calling
+  version: '1.0'
+bio-clip-seq-clip-preprocessing:
+  category: clip-seq
+  description: Preprocess CLIP-seq data including adapter trimming, UMI extraction,
+    and PCR duplicate removal. Use when preparing raw CLIP, iCLIP, or eCLIP reads
+    for peak calling.
+  subcategory: clip-preprocessing
+  version: '1.0'
+bio-codon-usage:
+  category: sequence-manipulation
+  description: Analyze codon usage, calculate CAI (Codon Adaptation Index), and examine
+    synonymous codon bias using Biopython. Use when analyzing coding sequences for
+    expression optimization or evolutionary analysis.
+  subcategory: codon-usage
+  version: '1.0'
+bio-comparative-genomics-ancestral-reconstruction:
+  category: comparative-genomics
+  description: Reconstruct ancestral sequences at phylogenetic nodes using PAML and
+    IQ-TREE marginal likelihood methods. Infer ancient protein sequences and trace
+    evolutionary trajectories through sequence history. Use when inferring ancestral
+    states for protein resurrection or tracing evolutionary history.
+  subcategory: ancestral-reconstruction
+  version: '1.0'
+bio-comparative-genomics-hgt-detection:
+  category: comparative-genomics
+  description: Detect horizontal gene transfer events using HGTector, compositional
+    analysis, and phylogenetic incongruence methods. Identify foreign genes in bacterial
+    and archaeal genomes from anomalous composition or unexpected phylogenetic placement.
+    Use when searching for horizontally transferred genes or analyzing genome evolution
+    in prokaryotes.
+  subcategory: hgt-detection
+  version: '1.0'
+bio-comparative-genomics-ortholog-inference:
+  category: comparative-genomics
+  description: Infer orthologous gene groups across species using OrthoFinder and
+    ProteinOrtho. Identify orthologs, paralogs, and co-orthologs for comparative genomics
+    and functional annotation transfer. Use when identifying gene orthologs across
+    species or building orthogroups for evolutionary analysis.
+  subcategory: ortholog-inference
+  version: '1.0'
+bio-comparative-genomics-positive-selection:
+  category: comparative-genomics
+  description: Detect positive selection using dN/dS (omega) tests with PAML codeml
+    and HyPhy. Identify sites and branches under adaptive evolution through codon
+    models and branch-site tests. Use when testing for adaptive evolution in gene
+    families or identifying positively selected sites.
+  subcategory: positive-selection
+  version: '1.0'
+bio-comparative-genomics-synteny-analysis:
+  category: comparative-genomics
+  description: Analyze genome collinearity and syntenic blocks using MCScanX, SyRI,
+    and JCVI for comparative genomics. Detect conserved gene order, chromosomal rearrangements,
+    and whole-genome duplications. Use when comparing genome structure between species
+    or identifying conserved genomic regions.
+  subcategory: synteny-analysis
+  version: '1.0'
+bio-compressed-files:
+  category: sequence-io
+  description: Read and write compressed sequence files (gzip, bzip2, BGZF) using
+    Biopython. Use when working with .gz or .bz2 sequence files. Use BGZF for indexable
+    compressed files.
+  subcategory: compressed-files
+  version: '1.0'
+bio-consensus-sequences:
+  category: variant-calling
+  description: Generate consensus FASTA sequences by applying VCF variants to a reference
+    using bcftools consensus. Use when creating sample-specific reference sequences
+    or reconstructing haplotypes.
+  subcategory: consensus-sequences
+  version: '1.0'
+bio-copy-number-cnv-annotation:
+  category: copy-number
+  description: Annotate CNVs with genes, pathways, and clinical significance. Use
+    when interpreting CNV calls or identifying affected genes from copy number analysis.
+  subcategory: cnv-annotation
+  version: '1.0'
+bio-copy-number-cnv-visualization:
+  category: copy-number
+  description: Visualize copy number profiles, segments, and compare across samples.
+    Create publication-quality plots of CNV data from CNVkit, GATK, or other callers.
+    Use when creating genome-wide CNV plots, sample heatmaps, or chromosome-level
+    visualizations.
+  subcategory: cnv-visualization
+  version: '1.0'
+bio-copy-number-cnvkit-analysis:
+  category: copy-number
+  description: Detect copy number variants from targeted/exome sequencing using CNVkit.
+    Supports tumor-normal pairs, tumor-only, and germline CNV calling. Use when detecting
+    CNVs from WES or targeted panel sequencing data.
+  subcategory: cnvkit-analysis
+  version: '1.0'
+bio-copy-number-gatk-cnv:
+  category: copy-number
+  description: Call copy number variants using GATK best practices workflow. Supports
+    both somatic (tumor-normal) and germline CNV detection from WGS or WES data. Use
+    when following GATK best practices or integrating CNV calling with other GATK
+    variant pipelines.
+  subcategory: gatk-cnv
+  version: '1.0'
+bio-crispr-screens-base-editing-analysis:
+  category: crispr-screens
+  description: Analyzes base editing and prime editing outcomes including editing
+    efficiency, bystander edits, and indel frequencies. Use when quantifying CRISPR
+    base editor results, comparing ABE vs CBE efficiency, or assessing prime editing
+    fidelity.
+  subcategory: base-editing-analysis
+  version: '1.0'
+bio-crispr-screens-batch-correction:
+  category: crispr-screens
+  description: Batch effect correction for CRISPR screens. Covers normalization across
+    batches, technical replicate handling, and batch-aware analysis. Use when combining
+    screens from multiple batches or correcting systematic technical variation.
+  subcategory: batch-correction
+  version: '1.0'
+bio-crispr-screens-crispresso-editing:
+  category: crispr-screens
+  description: CRISPResso2 for analyzing CRISPR gene editing outcomes. Quantifies
+    indels, HDR efficiency, and generates comprehensive editing reports. Use when
+    analyzing amplicon sequencing data from CRISPR editing experiments to assess editing
+    efficiency.
+  subcategory: crispresso-editing
+  version: '1.0'
+bio-crispr-screens-hit-calling:
+  category: crispr-screens
+  description: Statistical methods for calling hits in CRISPR screens. Covers MAGeCK,
+    BAGEL2, drugZ, and custom approaches for identifying essential and resistance
+    genes. Use when identifying significant genes from screen count data after QC
+    passes.
+  subcategory: hit-calling
+  version: '1.0'
+bio-crispr-screens-jacks-analysis:
+  category: crispr-screens
+  description: JACKS (Joint Analysis of CRISPR/Cas9 Knockout Screens) for modeling
+    sgRNA efficacy and gene essentiality. Use when analyzing multiple CRISPR screens
+    simultaneously or when accounting for variable sgRNA efficiency across experiments.
+  subcategory: jacks-analysis
+  version: '1.0'
+bio-crispr-screens-library-design:
+  category: crispr-screens
+  description: CRISPR library design for genetic screens. Covers sgRNA selection,
+    library composition, control design, and oligo ordering. Use when designing custom
+    sgRNA libraries for knockout, activation, or interference screens.
+  subcategory: library-design
+  version: '1.0'
+bio-crispr-screens-mageck-analysis:
+  category: crispr-screens
+  description: MAGeCK (Model-based Analysis of Genome-wide CRISPR-Cas9 Knockout) for
+    pooled CRISPR screen analysis. Covers count normalization, gene ranking, and pathway
+    analysis. Use when identifying essential genes, drug targets, or resistance mechanisms
+    from dropout or enrichment screens.
+  subcategory: mageck-analysis
+  version: '1.0'
+bio-crispr-screens-screen-qc:
+  category: crispr-screens
+  description: Quality control for pooled CRISPR screens. Covers library representation,
+    read distribution, replicate correlation, and essential gene recovery. Use when
+    assessing screen quality before hit calling or diagnosing poor screen performance.
+  subcategory: screen-qc
+  version: '1.0'
+bio-ctdna-mutation-detection:
+  category: liquid-biopsy
+  description: Detects somatic mutations in circulating tumor DNA using variant callers
+    optimized for low allele fractions with UMI-based error suppression. Reliably
+    detects mutations at VAF above 0.5 percent using consensus-based approaches. Use
+    when identifying tumor mutations from plasma DNA or tracking specific variants.
+  subcategory: ctdna-mutation-detection
+  version: '1.0'
+bio-data-visualization-circos-plots:
+  category: data-visualization
+  description: Create circular genome visualizations with Circos and pyCircos. Display
+    multi-track data including ideograms, genes, variants, CNVs, and interaction arcs.
+    Use when creating circular genome visualizations.
+  subcategory: circos-plots
+  version: '1.0'
+bio-data-visualization-color-palettes:
+  category: data-visualization
+  description: Select and apply colorblind-friendly palettes for scientific figures
+    using viridis, RColorBrewer, and custom color schemes. Use when selecting colorblind-friendly
+    palettes for figures.
+  subcategory: color-palettes
+  version: '1.0'
+bio-data-visualization-genome-browser-tracks:
+  category: data-visualization
+  description: Generate genome browser visualizations using pyGenomeTracks or IGV
+    batch scripting for publication figures. Use when creating publication figures
+    of genomic regions with multiple data tracks.
+  subcategory: genome-browser-tracks
+  version: '1.0'
+bio-data-visualization-genome-tracks:
+  category: data-visualization
+  description: Create genome browser-style visualizations showing multiple data tracks
+    (coverage, peaks, genes) using pyGenomeTracks, Gviz, and IGV. Use when visualizing
+    genomic data at specific loci with multiple aligned tracks.
+  subcategory: genome-tracks
+  version: '1.0'
+bio-data-visualization-ggplot2-fundamentals:
+  category: data-visualization
+  description: Create publication-quality scientific figures with ggplot2 including
+    scatter plots, boxplots, heatmaps, and multi-panel layouts. Use when creating
+    static figures for papers, presentations, or reports in R.
+  subcategory: ggplot2-fundamentals
+  version: '1.0'
+bio-data-visualization-heatmaps-clustering:
+  category: data-visualization
+  description: Create clustered heatmaps with row/column annotations using ComplexHeatmap,
+    pheatmap, and seaborn for gene expression and omics data visualization. Use when
+    visualizing expression patterns across samples or identifying co-expressed gene
+    clusters.
+  subcategory: heatmaps-clustering
+  version: '1.0'
+bio-data-visualization-interactive-visualization:
+  category: data-visualization
+  description: Create interactive HTML plots with plotly and bokeh for exploratory
+    data analysis and web-based sharing of omics visualizations. Use when building
+    zoomable, hoverable plots for data exploration or web dashboards.
+  subcategory: interactive-visualization
+  version: '1.0'
+bio-data-visualization-multipanel-figures:
+  category: data-visualization
+  description: Combine multiple plots into publication-ready multi-panel figures using
+    patchwork, cowplot, or matplotlib GridSpec with shared legends and panel labels.
+    Use when combining multiple plots into publication figures.
+  subcategory: multipanel-figures
+  version: '1.0'
+bio-data-visualization-network-visualization:
+  category: data-visualization
+  description: Visualize biological networks including gene regulatory networks, protein
+    interaction networks, and co-expression modules using NetworkX, PyVis, and Cytoscape
+    automation. Produces interactive and publication-quality network figures. Use
+    when creating network diagrams from interaction data, GRN results, or co-expression
+    modules.
+  subcategory: network-visualization
+  version: '1.0'
+bio-data-visualization-specialized-omics-plots:
+  category: data-visualization
+  description: Reusable plotting functions for common omics visualizations. Custom
+    ggplot2/matplotlib implementations of volcano, MA, PCA, enrichment dotplots, boxplots,
+    and survival curves. Use when creating volcano, MA, or enrichment plots.
+  subcategory: specialized-omics-plots
+  version: '1.0'
+bio-data-visualization-upset-plots:
+  category: data-visualization
+  description: Create UpSet plots to visualize set intersections as an alternative
+    to Venn diagrams using UpSetR or upsetplot. Use when comparing overlapping gene
+    sets, peak sets, or sample groups with more than 3 sets.
+  subcategory: upset-plots
+  version: '1.0'
+bio-data-visualization-volcano-customization:
+  category: data-visualization
+  description: Create publication-ready volcano plots with custom thresholds, gene
+    labels, and highlighting using ggplot2, EnhancedVolcano, or matplotlib. Use when
+    visualizing differential expression or association results with gene annotations.
+  subcategory: volcano-customization
+  version: '1.0'
+bio-de-deseq2-basics:
+  category: differential-expression
+  description: Perform differential expression analysis using DESeq2 in R/Bioconductor.
+    Use for analyzing RNA-seq count data, creating DESeqDataSet objects, running the
+    DESeq workflow, and extracting results with log fold change shrinkage. Use when
+    performing DE analysis with DESeq2.
+  subcategory: deseq2-basics
+  version: '1.0'
+bio-de-edger-basics:
+  category: differential-expression
+  description: Perform differential expression analysis using edgeR in R/Bioconductor.
+    Use for analyzing RNA-seq count data with the quasi-likelihood F-test framework,
+    creating DGEList objects, normalization, dispersion estimation, and statistical
+    testing. Use when performing DE analysis with edgeR.
+  subcategory: edger-basics
+  version: '1.0'
+bio-de-results:
+  category: differential-expression
+  description: Extract, filter, annotate, and export differential expression results
+    from DESeq2 or edgeR. Use for identifying significant genes, applying multiple
+    testing corrections, adding gene annotations, and preparing results for downstream
+    analysis. Use when filtering and exporting DE analysis results.
+  subcategory: de-results
+  version: '1.0'
+bio-de-visualization:
+  category: differential-expression
+  description: Visualize differential expression results using DESeq2/edgeR built-in
+    functions. Covers plotMA, plotDispEsts, plotCounts, plotBCV, sample distance heatmaps,
+    and p-value histograms. Use when visualizing differential expression results.
+  subcategory: de-visualization
+  version: '1.0'
+bio-differential-expression-batch-correction:
+  category: differential-expression
+  description: Remove batch effects from RNA-seq data using ComBat, ComBat-Seq, limma
+    removeBatchEffect, and SVA for unknown batch variables. Use when correcting batch
+    effects in expression data.
+  subcategory: batch-correction
+  version: '1.0'
+bio-differential-expression-timeseries-de:
+  category: differential-expression
+  description: Analyze time-series RNA-seq data using limma voom with splines, maSigPro,
+    and ImpulseDE2. Identify genes with dynamic expression patterns. Use when analyzing
+    time-series or longitudinal expression data.
+  subcategory: timeseries-de
+  version: '1.0'
+bio-differential-splicing:
+  category: alternative-splicing
+  description: Detects differential alternative splicing between conditions using
+    rMATS-turbo (BAM-based) or SUPPA2 diffSplice (TPM-based). Reports events with
+    FDR-corrected significance and delta PSI effect sizes. Use when comparing splicing
+    patterns between treatment groups, tissues, or disease states.
+  subcategory: differential-splicing
+  version: '1.0'
+bio-duplicate-handling:
+  category: alignment-files
+  description: Mark and remove PCR/optical duplicates using samtools fixmate and markdup.
+    Use when preparing alignments for variant calling or when duplicate reads would
+    bias analysis.
+  subcategory: duplicate-handling
+  version: '1.0'
+bio-ecological-genomics-biodiversity-metrics:
+  category: ecological-genomics
+  description: Calculates species richness, diversity, and turnover using the Hill
+    number framework with iNEXT coverage-based rarefaction/extrapolation, asymptotic
+    diversity estimation, and beta diversity partitioning (betapart turnover vs nestedness).
+    Compares assemblages using coverage-standardized rather than size-standardized
+    rarefaction. Use when quantifying biodiversity from species abundance or incidence
+    data, comparing diversity across sites, or constructing rarefaction curves. Not
+    for clinical 16S microbiome alpha/beta diversity (see microbiome/diversity-analysis).
+  subcategory: biodiversity-metrics
+  version: '1.0'
+bio-ecological-genomics-community-ecology:
+  category: ecological-genomics
+  description: Analyzes community composition using constrained ordination (CCA, RDA,
+    db-RDA), variance partitioning (varpart), indicator species analysis (indicspecies
+    multipatt), and distance-based environmental gradient methods with vegan. Links
+    species composition to environmental explanatory variables. Use when testing how
+    environmental gradients structure species communities, identifying habitat indicator
+    taxa, or partitioning explained variation among predictors. Not for basic unconstrained
+    ordination and PERMANOVA (see microbiome/diversity-analysis).
+  subcategory: community-ecology
+  version: '1.0'
+bio-ecological-genomics-conservation-genetics:
+  category: ecological-genomics
+  description: Assesses genetic health of populations for conservation using effective
+    population size estimation (GONE2 for recent Ne trajectory, NeEstimator for contemporary
+    Ne, Stairway Plot 2 and PSMC for historical Ne), F-statistics (hierfstat), runs
+    of homozygosity (detectRUNS), and genetic diversity metrics. Use when estimating
+    effective population size, detecting inbreeding or bottlenecks, or assessing genetic
+    diversity in threatened species from microsatellite or SNP data.
+  subcategory: conservation-genetics
+  version: '1.0'
+bio-ecological-genomics-edna-metabarcoding:
+  category: ecological-genomics
+  description: Processes environmental DNA metabarcoding data from raw amplicon reads
+    to species occurrence tables using OBITools3, DADA2, and taxonomic assignment
+    against BOLD, MIDORI2, or MitoFish databases. Handles COI, 12S, rbcL, and ITS
+    barcode regions with primer removal, denoising, chimera detection, and contamination
+    filtering via decontam. Includes occupancy modeling (occumb) for detection probability
+    correction. Use when analyzing eDNA from water, soil, or bulk samples for biodiversity
+    monitoring. Not for 16S human microbiome (see microbiome/amplicon-processing).
+  subcategory: edna-metabarcoding
+  version: '1.0'
+bio-ecological-genomics-landscape-genomics:
+  category: ecological-genomics
+  description: Tests genotype-environment associations and identifies loci under local
+    adaptation using LFMM2 (LEA), pcadapt outlier detection, OutFLANK Fst-based selection
+    scans, and redundancy analysis. Detects adaptive genetic variation correlated
+    with environmental variables while controlling for population structure. Use when
+    identifying adaptive loci across environmental gradients, testing for signatures
+    of local adaptation, or predicting genetic vulnerability to climate change with
+    gradientForest.
+  subcategory: landscape-genomics
+  version: '1.0'
+bio-ecological-genomics-species-delimitation:
+  category: ecological-genomics
+  description: Delimits species boundaries from molecular data using distance-based
+    (ASAP), tree-based (bPTP, GMYC), and coalescent (BPP) methods. Compares multiple
+    delimitation results with delimtools. Use when delineating putative species from
+    DNA barcoding data, resolving cryptic species complexes, or validating taxonomic
+    assignments. Emphasizes multi-method consensus following integrative taxonomy
+    best practice.
+  subcategory: species-delimitation
+  version: '1.0'
+bio-entrez-fetch:
+  category: database-access
+  description: Retrieve records from NCBI databases using Biopython Bio.Entrez. Use
+    when downloading sequences, fetching GenBank records, getting document summaries,
+    or parsing NCBI data into Biopython objects.
+  subcategory: entrez-fetch
+  version: '1.0'
+bio-entrez-link:
+  category: database-access
+  description: Find cross-references between NCBI databases using Biopython Bio.Entrez.
+    Use when navigating from genes to proteins, sequences to publications, finding
+    related records, or discovering database relationships.
+  subcategory: entrez-link
+  version: '1.0'
+bio-entrez-search:
+  category: database-access
+  description: Search NCBI databases using Biopython Bio.Entrez. Use when finding
+    records by keyword, building complex search queries, discovering database structure,
+    or getting global query counts across databases.
+  subcategory: entrez-search
+  version: '1.0'
+bio-epidemiological-genomics-amr-surveillance:
+  category: epidemiological-genomics
+  description: Detect and track antimicrobial resistance genes using AMRFinderPlus
+    and ResFinder with epidemiological context. Monitor resistance trends and identify
+    emerging resistance patterns. Use when screening genomes for AMR genes or tracking
+    resistance in surveillance programs.
+  subcategory: amr-surveillance
+  version: '1.0'
+bio-epidemiological-genomics-pathogen-typing:
+  category: epidemiological-genomics
+  description: Perform multi-locus sequence typing (MLST), core genome MLST, and SNP-based
+    strain typing for bacterial isolate characterization using mlst and chewBBACA.
+    Use when identifying strain types, tracking outbreak clones, or characterizing
+    bacterial isolates.
+  subcategory: pathogen-typing
+  version: '1.0'
+bio-epidemiological-genomics-phylodynamics:
+  category: epidemiological-genomics
+  description: Construct time-scaled phylogenies and infer evolutionary dynamics using
+    TreeTime and BEAST2 for outbreak analysis. Estimate divergence times, molecular
+    clock rates, and ancestral states. Use when dating outbreak origins, estimating
+    transmission rates, or building time-calibrated trees.
+  subcategory: phylodynamics
+  version: '1.0'
+bio-epidemiological-genomics-transmission-inference:
+  category: epidemiological-genomics
+  description: Infer pathogen transmission networks and identify likely transmission
+    pairs using TransPhylo and outbreak reconstruction algorithms. Estimate who-infected-whom
+    from genomic and epidemiological data. Use when investigating outbreak transmission
+    chains or identifying superspreaders.
+  subcategory: transmission-inference
+  version: '1.0'
+bio-epidemiological-genomics-variant-surveillance:
+  category: epidemiological-genomics
+  description: Assign pathogen lineages and track variants using Nextclade and pangolin
+    for viral surveillance. Monitor variant prevalence and identify emerging variants
+    of concern. Use when classifying viral sequences, tracking lineage dynamics, or
+    monitoring for variants of concern.
+  subcategory: variant-surveillance
+  version: '1.0'
+bio-epitranscriptomics-m6a-differential:
+  category: epitranscriptomics
+  description: Identify differential m6A methylation between conditions from MeRIP-seq.
+    Use when comparing epitranscriptomic changes between treatment groups or cell
+    states.
+  subcategory: m6a-differential
+  version: '1.0'
+bio-epitranscriptomics-m6a-peak-calling:
+  category: epitranscriptomics
+  description: Call m6A peaks from MeRIP-seq IP vs input comparisons. Use when identifying
+    m6A modification sites from methylated RNA immunoprecipitation data.
+  subcategory: m6a-peak-calling
+  version: '1.0'
+bio-epitranscriptomics-m6anet-analysis:
+  category: epitranscriptomics
+  description: Detect m6A modifications from Oxford Nanopore direct RNA sequencing
+    using m6Anet. Use when analyzing epitranscriptomic modifications from long-read
+    RNA data without immunoprecipitation.
+  subcategory: m6anet-analysis
+  version: '1.0'
+bio-epitranscriptomics-merip-preprocessing:
+  category: epitranscriptomics
+  description: Align and QC MeRIP-seq IP and input samples for m6A analysis. Use when
+    preparing MeRIP-seq data for peak calling or differential methylation analysis.
+  subcategory: merip-preprocessing
+  version: '1.0'
+bio-epitranscriptomics-modification-visualization:
+  category: epitranscriptomics
+  description: Create metagene plots and browser tracks for RNA modification data.
+    Use when visualizing m6A distribution patterns around genomic features like stop
+    codons.
+  subcategory: modification-visualization
+  version: '1.0'
+bio-experimental-design-batch-design:
+  category: experimental-design
+  description: Designs experiments to minimize and account for batch effects using
+    balanced layouts and blocking strategies. Use when planning multi-batch experiments,
+    assigning samples to sequencing lanes, or designing studies where technical variation
+    could confound biological signals.
+  subcategory: batch-design
+  version: '1.0'
+bio-experimental-design-multiple-testing:
+  category: experimental-design
+  description: Applies multiple testing correction methods including FDR, Bonferroni,
+    and q-value for genomics data. Use when filtering differential expression results,
+    setting significance thresholds, or choosing between correction methods for different
+    study designs.
+  subcategory: multiple-testing
+  version: '1.0'
+bio-experimental-design-power-analysis:
+  category: experimental-design
+  description: Calculates statistical power and minimum sample sizes for RNA-seq,
+    ATAC-seq, and other sequencing experiments. Use when planning experiments, determining
+    how many replicates are needed, or assessing whether a study is adequately powered
+    to detect expected effect sizes.
+  subcategory: power-analysis
+  version: '1.0'
+bio-experimental-design-sample-size:
+  category: experimental-design
+  description: Estimates required sample sizes for differential expression, ChIP-seq,
+    methylation, and proteomics studies. Use when budgeting experiments, writing grant
+    proposals, or determining minimum replicates needed to achieve statistical significance
+    for expected effect sizes.
+  subcategory: sample-size
+  version: '1.0'
+bio-expression-matrix-counts-ingest:
+  category: expression-matrix
+  description: Load gene expression count matrices from various formats including
+    CSV, TSV, featureCounts, Salmon, kallisto, and 10X. Use when importing quantification
+    results for downstream analysis.
+  subcategory: counts-ingest
+  version: '1.0'
+bio-expression-matrix-gene-id-mapping:
+  category: expression-matrix
+  description: Convert between gene identifier systems including Ensembl, Entrez,
+    HGNC symbols, and UniProt. Use when mapping IDs for pathway analysis or matching
+    different data sources.
+  subcategory: gene-id-mapping
+  version: '1.0'
+bio-expression-matrix-metadata-joins:
+  category: expression-matrix
+  description: Merge sample metadata with count matrices and add gene annotations.
+    Use when preparing data for differential expression analysis or visualization.
+  subcategory: metadata-joins
+  version: '1.0'
+bio-expression-matrix-normalization:
+  category: expression-matrix
+  description: Normalize and transform RNA-seq count matrices for differential expression,
+    visualization, and clustering. Covers between-sample (TMM, RLE, upper quartile),
+    within-sample (TPM, FPKM), variance-stabilizing (VST, rlog), and single-cell (scran)
+    methods. Use when choosing or applying normalization to expression data.
+  subcategory: normalization
+  version: '1.0'
+bio-expression-matrix-sparse-handling:
+  category: expression-matrix
+  description: Work with sparse matrices for memory-efficient storage of count data.
+    Use when dealing with single-cell data or large bulk RNA-seq datasets where most
+    values are zero.
+  subcategory: sparse-handling
+  version: '1.0'
+bio-fastq-quality:
+  category: sequence-io
+  description: Work with FASTQ quality scores using Biopython. Use when analyzing
+    read quality, filtering by quality, trimming low-quality bases, or generating
+    quality reports.
+  subcategory: fastq-quality
+  version: '1.0'
+bio-filter-sequences:
+  category: sequence-io
+  description: Filter and select sequences by criteria (length, ID, GC content, patterns)
+    using Biopython. Use when subsetting sequences, removing unwanted records, or
+    selecting by specific criteria.
+  subcategory: filter-sequences
+  version: '1.0'
+bio-flow-cytometry-bead-normalization:
+  category: flow-cytometry
+  description: Bead-based normalization for CyTOF and high-parameter flow cytometry.
+    Covers EQ bead normalization, signal drift correction, and batch normalization.
+    Use when correcting instrument drift in CyTOF or harmonizing data across batches.
+  subcategory: bead-normalization
+  version: '1.0'
+bio-flow-cytometry-clustering-phenotyping:
+  category: flow-cytometry
+  description: Unsupervised clustering and cell type identification for flow/mass
+    cytometry. Covers FlowSOM, Phenograph, and CATALYST workflows. Use when discovering
+    cell populations in high-dimensional cytometry data without predefined gates.
+  subcategory: clustering-phenotyping
+  version: '1.0'
+bio-flow-cytometry-compensation-transformation:
+  category: flow-cytometry
+  description: Spillover compensation and data transformation for flow cytometry.
+    Covers compensation matrix calculation, application, and biexponential/arcsinh
+    transforms. Use when correcting spectral overlap between fluorophores or transforming
+    data for analysis.
+  subcategory: compensation-transformation
+  version: '1.0'
+bio-flow-cytometry-cytometry-qc:
+  category: flow-cytometry
+  description: Comprehensive quality control for flow cytometry and CyTOF data. Covers
+    flow rate stability, signal drift, margin events, dead cell exclusion, and batch
+    QC. Use when assessing acquisition quality or identifying problematic samples
+    before analysis.
+  subcategory: cytometry-qc
+  version: '1.0'
+bio-flow-cytometry-differential-analysis:
+  category: flow-cytometry
+  description: Differential abundance and state analysis for cytometry data. Compare
+    cell populations between conditions using statistical methods. Use when testing
+    for significant changes in cell frequencies or marker expression between groups.
+  subcategory: differential-analysis
+  version: '1.0'
+bio-flow-cytometry-doublet-detection:
+  category: flow-cytometry
+  description: Detect and remove doublets from flow and mass cytometry data. Covers
+    FSC/SSC gating and computational doublet detection methods. Use when filtering
+    out cell aggregates before clustering or quantitative analysis.
+  subcategory: doublet-detection
+  version: '1.0'
+bio-flow-cytometry-fcs-handling:
+  category: flow-cytometry
+  description: Read and manipulate Flow Cytometry Standard (FCS) files. Covers loading
+    data, accessing parameters, and basic data exploration. Use when loading and inspecting
+    flow or mass cytometry data before preprocessing.
+  subcategory: fcs-handling
+  version: '1.0'
+bio-flow-cytometry-gating-analysis:
+  category: flow-cytometry
+  description: Manual and automated gating for defining cell populations in flow cytometry.
+    Covers rectangular, polygon, and data-driven gates. Use when identifying cell
+    populations through hierarchical gating strategies.
+  subcategory: gating-analysis
+  version: '1.0'
+bio-format-conversion:
+  category: sequence-io
+  description: Convert between sequence file formats (FASTA, FASTQ, GenBank, EMBL)
+    using Biopython Bio.SeqIO. Use when changing file formats or preparing data for
+    different tools.
+  subcategory: format-conversion
+  version: '1.0'
+bio-fragment-analysis:
+  category: liquid-biopsy
+  description: Analyzes cfDNA fragment size distributions and fragmentomics features
+    using FinaleToolkit or Griffin. Extracts nucleosome positioning patterns, fragment
+    ratios, and DELFI-style fragmentation profiles for cancer detection. Use when
+    leveraging fragment patterns for tumor detection or tissue-of-origin analysis.
+  subcategory: fragment-analysis
+  version: '1.0'
+bio-gatk-variant-calling:
+  category: variant-calling
+  description: Variant calling with GATK HaplotypeCaller following best practices.
+    Covers germline SNP/indel calling, GVCF workflow for cohorts, joint genotyping,
+    and variant quality score recalibration (VQSR). Use when calling variants with
+    GATK HaplotypeCaller.
+  subcategory: gatk-variant-calling
+  version: '1.0'
+bio-gene-regulatory-networks-coexpression-networks:
+  category: gene-regulatory-networks
+  description: Build weighted gene co-expression networks to identify modules of co-regulated
+    genes and relate them to phenotypes using WGCNA and CEMiTool. Detects hub genes
+    and module-trait relationships from bulk or single-cell expression data. Use when
+    finding co-expression modules, identifying hub genes, or relating gene networks
+    to clinical or experimental variables.
+  subcategory: coexpression-networks
+  version: '1.0'
+bio-gene-regulatory-networks-differential-networks:
+  category: gene-regulatory-networks
+  description: Compare gene regulatory and co-expression networks between biological
+    conditions to identify rewired regulatory relationships using DiffCorr. Detects
+    gained, lost, and reversed gene-gene correlations between conditions. Use when
+    comparing co-expression networks between disease vs control, treatment conditions,
+    or developmental stages.
+  subcategory: differential-networks
+  version: '1.0'
+bio-gene-regulatory-networks-multiomics-grn:
+  category: gene-regulatory-networks
+  description: Build enhancer-driven gene regulatory networks by integrating single-cell
+    RNA-seq and ATAC-seq data using SCENIC+ to identify eRegulons linking transcription
+    factors to enhancers and target genes. Use when analyzing 10x multiome or paired
+    scRNA+scATAC data to infer cis-regulatory GRNs.
+  subcategory: multiomics-grn
+  version: '1.0'
+bio-gene-regulatory-networks-perturbation-simulation:
+  category: gene-regulatory-networks
+  description: Simulate transcription factor perturbation effects on cell state using
+    CellOracle, which integrates GRN inference with in silico knockout and overexpression
+    modeling. Predicts cell identity shifts and differentiation trajectory changes
+    from TF perturbations. Use when predicting the effect of transcription factor
+    knockouts, planning perturbation experiments, or identifying driver TFs for cell
+    fate transitions.
+  subcategory: perturbation-simulation
+  version: '1.0'
+bio-gene-regulatory-networks-scenic-regulons:
+  category: gene-regulatory-networks
+  description: Infer gene regulatory networks and identify transcription factor regulons
+    from single-cell RNA-seq data using pySCENIC. Discovers co-expression modules
+    with GRNBoost2, prunes by cis-regulatory motif enrichment, and scores regulon
+    activity per cell with AUCell. Use when identifying transcription factor regulons,
+    scoring TF activity in single cells, or finding master regulators of cell identity.
+  subcategory: scenic-regulons
+  version: '1.0'
+bio-genome-annotation-annotation-transfer:
+  category: genome-annotation
+  description: Transfer gene annotations between genome assemblies using Liftoff for
+    same-species annotation liftover and MiniProt for cross-species protein-to-genome
+    alignment. Enables rapid annotation of new assemblies using existing reference
+    annotations. Use when annotating a new assembly of a species with an existing
+    reference annotation or mapping annotations across related species.
+  subcategory: annotation-transfer
+  version: '1.0'
+bio-genome-annotation-eukaryotic-gene-prediction:
+  category: genome-annotation
+  description: Predict protein-coding genes in eukaryotic genomes using BRAKER3 for
+    combined RNA-seq and protein evidence, or GALBA for protein-only evidence. Runs
+    Augustus with trained parameters for accurate gene models. Use when annotating
+    a newly assembled eukaryotic genome or improving existing gene predictions.
+  subcategory: eukaryotic-gene-prediction
+  version: '1.0'
+bio-genome-annotation-functional-annotation:
+  category: genome-annotation
+  description: Assign GO terms, KEGG orthologs, Pfam domains, and EC numbers to predicted
+    proteins using eggNOG-mapper and InterProScan. Produces functional summaries for
+    downstream pathway and enrichment analysis. Use when adding functional annotation
+    to predicted genes or characterizing protein functions in a new genome.
+  subcategory: functional-annotation
+  version: '1.0'
+bio-genome-annotation-ncrna-annotation:
+  category: genome-annotation
+  description: Identify non-coding RNAs including tRNAs, rRNAs, snoRNAs, and regulatory
+    RNAs using Infernal covariance model searches against Rfam and tRNAscan-SE for
+    tRNA prediction. Use when performing genome-wide ncRNA annotation with assembly
+    input producing GFF output.
+  subcategory: ncrna-annotation
+  version: '1.0'
+bio-genome-annotation-prokaryotic-annotation:
+  category: genome-annotation
+  description: Annotate bacterial and archaeal genomes with Bakta for comprehensive
+    structural and functional annotation, or Prokka for lightweight annotation. Generates
+    GFF3, GenBank, and FASTA outputs with NCBI-compatible locus tags. Use when annotating
+    a newly assembled prokaryotic genome or preparing annotations for NCBI submission.
+  subcategory: prokaryotic-annotation
+  version: '1.0'
+bio-genome-annotation-repeat-annotation:
+  category: genome-annotation
+  description: Identify and classify repetitive elements and transposable elements
+    using RepeatModeler for de novo repeat library construction and RepeatMasker for
+    genome-wide repeat annotation. Quantify TE expression from RNA-seq with TEtranscripts.
+    Use when masking repeats before gene prediction or analyzing transposable element
+    activity.
+  subcategory: repeat-annotation
+  version: '1.0'
+bio-genome-assembly-assembly-polishing:
+  category: genome-assembly
+  description: Polish genome assemblies to reduce errors using short reads (Pilon),
+    long reads (Racon), or ONT-specific tools (medaka). Essential for improving long-read
+    assembly accuracy. Use when improving assembly accuracy with polishing tools.
+  subcategory: assembly-polishing
+  version: '1.0'
+bio-genome-assembly-assembly-qc:
+  category: genome-assembly
+  description: Assess genome assembly quality using QUAST for contiguity metrics and
+    BUSCO for completeness. Essential for evaluating assembly success and comparing
+    assemblers. Use when evaluating assembly completeness and quality.
+  subcategory: assembly-qc
+  version: '1.0'
+bio-genome-assembly-contamination-detection:
+  category: genome-assembly
+  description: Detect contamination and assess genome quality using CheckM, CheckM2,
+    GTDB-Tk, and GUNC for metagenome-assembled genomes and isolate assemblies. Use
+    when checking assemblies for contamination.
+  subcategory: contamination-detection
+  version: '1.0'
+bio-genome-assembly-hifi-assembly:
+  category: genome-assembly
+  description: High-quality genome assembly from PacBio HiFi reads using hifiasm with
+    phasing support. Use when building reference-quality diploid assemblies from HiFi
+    data, especially with trio or Hi-C phasing for fully resolved haplotypes.
+  subcategory: hifi-assembly
+  version: '1.0'
+bio-genome-assembly-long-read-assembly:
+  category: genome-assembly
+  description: De novo genome assembly from Oxford Nanopore or PacBio long reads using
+    Flye and Canu. Produces highly contiguous assemblies suitable for complete bacterial
+    genomes and resolving complex regions. Use when assembling genomes from ONT or
+    PacBio reads.
+  subcategory: long-read-assembly
+  version: '1.0'
+bio-genome-assembly-metagenome-assembly:
+  category: genome-assembly
+  description: Metagenome assembly from long reads using metaFlye and metaSPAdes with
+    binning strategies. Use when reconstructing genomes from microbial communities,
+    recovering metagenome-assembled genomes (MAGs), or resolving strain-level variation
+    in complex samples.
+  subcategory: metagenome-assembly
+  version: '1.0'
+bio-genome-assembly-scaffolding:
+  category: genome-assembly
+  description: Scaffold contigs into chromosome-level assemblies using Hi-C data with
+    YaHS, 3D-DNA, SALSA2, and validate with BUSCO and contact maps. Use when scaffolding
+    contigs to chromosome-level assemblies.
+  subcategory: scaffolding
+  version: '1.0'
+bio-genome-assembly-short-read-assembly:
+  category: genome-assembly
+  description: De novo genome assembly from Illumina short reads using SPAdes. Covers
+    bacterial, fungal, and small eukaryotic genome assembly, as well as metagenome
+    and transcriptome assembly modes. Use when assembling genomes from Illumina reads.
+  subcategory: short-read-assembly
+  version: '1.0'
+bio-genome-engineering-base-editing-design:
+  category: genome-engineering
+  description: Design guides for cytosine and adenine base editing using editing window
+    optimization and BE-Hive outcome prediction. Select optimal positions for C-to-T
+    or A-to-G conversions without double-strand breaks. Use when designing base editor
+    experiments for precise nucleotide changes.
+  subcategory: base-editing-design
+  version: '1.0'
+bio-genome-engineering-grna-design:
+  category: genome-engineering
+  description: Design guide RNAs for CRISPR-Cas9/Cas12a experiments using CRISPRscan
+    and local scoring algorithms. Score guides for on-target activity using Rule Set
+    2 and Azimuth models. Use when designing sgRNAs for gene knockout, activation,
+    or repression experiments.
+  subcategory: grna-design
+  version: '1.0'
+bio-genome-engineering-hdr-template-design:
+  category: genome-engineering
+  description: Design homology-directed repair donor templates for CRISPR knock-ins
+    using primer3-py. Create ssODN, dsDNA, or plasmid templates with optimized homology
+    arms. Use when designing donor templates for precise insertions, tagging, or allele
+    replacement.
+  subcategory: hdr-template-design
+  version: '1.0'
+bio-genome-engineering-off-target-prediction:
+  category: genome-engineering
+  description: Predict CRISPR off-target sites using Cas-OFFinder and CFD scoring
+    algorithms. Identify potential unintended cleavage sites genome-wide and assess
+    guide specificity. Use when evaluating guide RNA specificity or selecting guides
+    with minimal off-target risk.
+  subcategory: off-target-prediction
+  version: '1.0'
+bio-genome-engineering-prime-editing-design:
+  category: genome-engineering
+  description: Design pegRNAs for prime editing using PrimeDesign algorithms. Generate
+    spacer, PBS, and RT template sequences for precise genomic modifications without
+    double-strand breaks. Use when designing prime editing experiments for precise
+    insertions, deletions, or point mutations.
+  subcategory: prime-editing-design
+  version: '1.0'
+bio-genome-intervals-bed-file-basics:
+  category: genome-intervals
+  description: BED file format fundamentals, creation, validation, and basic operations.
+    Covers BED3 through BED12 formats, coordinate systems, sorting, and format conversion
+    using bedtools and pybedtools. Use when working with genomic coordinates or preparing
+    interval files for downstream tools.
+  subcategory: bed-file-basics
+  version: '1.0'
+bio-genome-intervals-bigwig-tracks:
+  category: genome-intervals
+  description: Create and read bigWig browser tracks for visualizing continuous genomic
+    data. Convert bedGraph to bigWig, extract signal values, and generate coverage
+    tracks using UCSC tools and pyBigWig. Use when preparing coverage tracks for genome
+    browsers or extracting signal at specific regions.
+  subcategory: bigwig-tracks
+  version: '1.0'
+bio-genome-intervals-coverage-analysis:
+  category: genome-intervals
+  description: Calculate read depth and coverage across genomic intervals using bedtools
+    genomecov and coverage. Generate bedGraph files, compute per-base depth, and summarize
+    coverage statistics. Use when assessing sequencing depth, creating coverage tracks,
+    or evaluating target capture efficiency.
+  subcategory: coverage-analysis
+  version: '1.0'
+bio-genome-intervals-gtf-gff-handling:
+  category: genome-intervals
+  description: Parse, query, and convert GTF and GFF3 annotation files. Extract gene,
+    transcript, and exon coordinates using gffread, gtfparse, and gffutils. Use when
+    extracting specific features from gene annotations or converting between annotation
+    formats.
+  subcategory: gtf-gff-handling
+  version: '1.0'
+bio-genome-intervals-interval-arithmetic:
+  category: genome-intervals
+  description: Core interval arithmetic operations including intersect, subtract,
+    merge, complement, map, and groupby using bedtools and pybedtools. Use when finding
+    overlapping regions, removing overlaps, combining adjacent intervals, or transferring
+    annotations between interval files.
+  subcategory: interval-arithmetic
+  version: '1.0'
+bio-genome-intervals-proximity-operations:
+  category: genome-intervals
+  description: Find nearest features, search within windows, and extend intervals
+    using closest, window, flank, and slop operations. Use when performing TSS proximity
+    analysis, assigning enhancers to genes, defining promoter regions, or finding
+    nearby genomic features.
+  subcategory: proximity-operations
+  version: '1.0'
+bio-geo-data:
+  category: database-access
+  description: Query NCBI Gene Expression Omnibus (GEO) for expression datasets using
+    Biopython Bio.Entrez. Use when finding microarray/RNA-seq datasets, downloading
+    expression data, or linking GEO series to SRA runs.
+  subcategory: geo-data
+  version: '1.0'
+bio-hi-c-analysis-compartment-analysis:
+  category: hi-c-analysis
+  description: Detect A/B compartments from Hi-C data using cooltools and eigenvector
+    decomposition. Identify active (A) and inactive (B) chromatin compartments from
+    contact matrices. Use when identifying A/B compartments from Hi-C data.
+  subcategory: compartment-analysis
+  version: '1.0'
+bio-hi-c-analysis-contact-pairs:
+  category: hi-c-analysis
+  description: Process Hi-C read pairs using pairtools. Parse alignments, filter duplicates,
+    classify pairs, and generate contact statistics from Hi-C sequencing data. Use
+    when processing raw Hi-C read pairs.
+  subcategory: contact-pairs
+  version: '1.0'
+bio-hi-c-analysis-hic-data-io:
+  category: hi-c-analysis
+  description: Load, convert, and manipulate Hi-C contact matrices using cooler format.
+    Read .cool/.mcool files, convert from .hic format, access matrix data, and export
+    to different formats. Use when loading or converting Hi-C contact matrices.
+  subcategory: hic-data-io
+  version: '1.0'
+bio-hi-c-analysis-hic-differential:
+  category: hi-c-analysis
+  description: Compare Hi-C contact matrices between conditions to identify differential
+    chromatin interactions. Compute log2 fold changes, statistical significance, and
+    visualize differential contact maps. Use when comparing Hi-C contacts between
+    conditions.
+  subcategory: hic-differential
+  version: '1.0'
+bio-hi-c-analysis-hic-visualization:
+  category: hi-c-analysis
+  description: Visualize Hi-C contact matrices, TADs, loops, and genomic features
+    using matplotlib, cooltools, and HiCExplorer. Create triangle plots, virtual 4C,
+    and multi-track figures. Use when visualizing contact matrices or genomic features.
+  subcategory: hic-visualization
+  version: '1.0'
+bio-hi-c-analysis-loop-calling:
+  category: hi-c-analysis
+  description: Detect chromatin loops and point interactions from Hi-C data using
+    cooltools, chromosight, and HiCCUPS-like methods. Identify CTCF-mediated loops
+    and enhancer-promoter contacts. Use when detecting chromatin loops from Hi-C data.
+  subcategory: loop-calling
+  version: '1.0'
+bio-hi-c-analysis-matrix-operations:
+  category: hi-c-analysis
+  description: Balance, normalize, and transform Hi-C contact matrices using cooler
+    and cooltools. Apply iterative correction (ICE), compute expected values, and
+    generate observed/expected matrices. Use when normalizing or transforming Hi-C
+    matrices.
+  subcategory: matrix-operations
+  version: '1.0'
+bio-hi-c-analysis-tad-detection:
+  category: hi-c-analysis
+  description: Call topologically associating domains (TADs) from Hi-C data using
+    insulation score, HiCExplorer, and other methods. Identify domain boundaries and
+    hierarchical domain structure. Use when calling TADs from Hi-C insulation scores.
+  subcategory: tad-detection
+  version: '1.0'
+bio-imaging-mass-cytometry-cell-segmentation:
+  category: imaging-mass-cytometry
+  description: Cell segmentation from multiplexed tissue images. Covers deep learning
+    (Cellpose, Mesmer) and classical approaches for nuclear and whole-cell segmentation.
+    Use when extracting single-cell data from IMC or MIBI images after preprocessing.
+  subcategory: cell-segmentation
+  version: '1.0'
+bio-imaging-mass-cytometry-data-preprocessing:
+  category: imaging-mass-cytometry
+  description: Load and preprocess imaging mass cytometry (IMC) and MIBI data. Covers
+    MCD/TIFF handling, hot pixel removal, and image normalization. Use when starting
+    IMC analysis from raw MCD files or preparing images for segmentation.
+  subcategory: data-preprocessing
+  version: '1.0'
+bio-imaging-mass-cytometry-interactive-annotation:
+  category: imaging-mass-cytometry
+  description: Interactive cell type annotation for IMC data. Covers napari-based
+    annotation, marker-guided labeling, training data generation, and annotation validation.
+    Use when manually annotating cell types for training classifiers or validating
+    automated phenotyping results.
+  subcategory: interactive-annotation
+  version: '1.0'
+bio-imaging-mass-cytometry-phenotyping:
+  category: imaging-mass-cytometry
+  description: Cell type assignment from marker expression in IMC data. Covers manual
+    gating, clustering, and automated classification approaches. Use when assigning
+    cell types to segmented IMC cells based on protein marker expression or when phenotyping
+    cells in multiplexed imaging data.
+  subcategory: phenotyping
+  version: '1.0'
+bio-imaging-mass-cytometry-quality-metrics:
+  category: imaging-mass-cytometry
+  description: Quality metrics for IMC data including signal-to-noise, channel correlation,
+    tissue integrity, and acquisition QC. Use when assessing data quality before analysis
+    or troubleshooting problematic acquisitions.
+  subcategory: quality-metrics
+  version: '1.0'
+bio-imaging-mass-cytometry-spatial-analysis:
+  category: imaging-mass-cytometry
+  description: Spatial analysis of cell neighborhoods and interactions in IMC data.
+    Covers neighbor graphs, spatial statistics, and interaction testing. Use when
+    analyzing spatial relationships between cell types, testing for neighborhood enrichment,
+    or identifying cell-cell interaction patterns in imaging mass cytometry data.
+  subcategory: spatial-analysis
+  version: '1.0'
+bio-immunoinformatics-epitope-prediction:
+  category: immunoinformatics
+  description: Predict B-cell and T-cell epitopes using BepiPred, IEDB tools, and
+    structure-based methods for vaccine and antibody design. Identify immunogenic
+    regions in antigens. Use when designing vaccines, mapping antibody binding sites,
+    or predicting immunogenic peptides.
+  subcategory: epitope-prediction
+  version: '1.0'
+bio-immunoinformatics-immunogenicity-scoring:
+  category: immunoinformatics
+  description: Score and prioritize neoantigens and epitopes for immunogenicity using
+    multi-factor models combining MHC binding, processing, expression, and sequence
+    features. Rank candidates for vaccine design. Use when prioritizing epitopes for
+    vaccine development or identifying the most immunogenic neoantigens.
+  subcategory: immunogenicity-scoring
+  version: '1.0'
+bio-immunoinformatics-mhc-binding-prediction:
+  category: immunoinformatics
+  description: Predict peptide-MHC class I and II binding affinity using MHCflurry
+    and NetMHCpan neural network models. Identify potential T-cell epitopes from protein
+    sequences. Use when predicting MHC binding for vaccine design or neoantigen identification.
+  subcategory: mhc-binding-prediction
+  version: '1.0'
+bio-immunoinformatics-neoantigen-prediction:
+  category: immunoinformatics
+  description: Identify tumor neoantigens from somatic mutations using pVACtools for
+    personalized cancer immunotherapy. Predict mutant peptides that bind patient HLA
+    and may elicit T-cell responses. Use when identifying vaccine targets or checkpoint
+    inhibitor response biomarkers from tumor sequencing data.
+  subcategory: neoantigen-prediction
+  version: '1.0'
+bio-immunoinformatics-tcr-epitope-binding:
+  category: immunoinformatics
+  description: Predict TCR-epitope specificity using ERGO-II and deep learning models
+    for T-cell receptor antigen recognition. Match TCRs to their cognate epitopes
+    or predict TCR targets. Use when analyzing TCR repertoire specificity or identifying
+    antigen-reactive T-cells.
+  subcategory: tcr-epitope-binding
+  version: '1.0'
+bio-interaction-databases:
+  category: database-access
+  description: Query protein-protein and gene interaction databases including STRING,
+    BioGRID, and IntAct via their REST APIs and Python clients. Retrieve interaction
+    networks, confidence scores, and functional enrichment. Use when building protein
+    interaction networks, contextualizing gene lists with known interactions, or retrieving
+    pathway-level interaction data.
+  subcategory: interaction-databases
+  version: '1.0'
+bio-isoform-switching:
+  category: alternative-splicing
+  description: Analyzes isoform switching events and functional consequences using
+    IsoformSwitchAnalyzeR. Predicts protein domain changes, NMD sensitivity, ORF alterations,
+    and coding potential shifts between conditions. Use when investigating how splicing
+    changes affect protein function.
+  subcategory: isoform-switching
+  version: '1.0'
+bio-liquid-biopsy-pipeline:
+  category: workflows
+  description: Cell-free DNA analysis pipeline from plasma sequencing to tumor monitoring.
+    Preprocesses cfDNA reads, analyzes fragment patterns, estimates tumor fraction
+    from sWGS, and optionally detects mutations from targeted panels. Use when analyzing
+    liquid biopsy samples for cancer detection or monitoring.
+  subcategory: liquid-biopsy-pipeline
+  version: '1.0'
+bio-local-blast:
+  category: database-access
+  description: Run local BLAST searches using BLAST+ command-line tools. Use when
+    running fast unlimited searches, building custom databases, performing large-scale
+    analysis, or when NCBI servers are slow or unavailable.
+  subcategory: local-blast
+  version: '1.0'
+bio-long-read-sequencing-clair3-variants:
+  category: long-read-sequencing
+  description: Deep learning-based variant calling from long reads using Clair3 for
+    SNPs and small indels. Use when calling germline variants from ONT or PacBio alignments,
+    particularly when high accuracy is needed for clinical or research applications.
+  subcategory: clair3-variants
+  version: '1.0'
+bio-long-read-sequencing-isoseq-analysis:
+  category: long-read-sequencing
+  description: Analyze PacBio Iso-Seq data for full-length isoform discovery and quantification.
+    Use when characterizing transcript diversity or identifying novel splice variants.
+  subcategory: isoseq-analysis
+  version: '1.0'
+bio-long-read-sequencing-nanopore-methylation:
+  category: long-read-sequencing
+  description: Calls DNA methylation from Oxford Nanopore sequencing data using signal-level
+    analysis. Use when detecting 5mC or 6mA modifications directly from nanopore reads
+    without bisulfite conversion.
+  subcategory: nanopore-methylation
+  version: '1.0'
+bio-longitudinal-monitoring:
+  category: liquid-biopsy
+  description: Tracks ctDNA dynamics over time for treatment response monitoring using
+    serial liquid biopsy samples. Analyzes tumor fraction trends, mutation clearance
+    kinetics, and defines molecular response criteria. Use when monitoring patients
+    during therapy or detecting molecular relapse before clinical progression.
+  subcategory: longitudinal-monitoring
+  version: '1.0'
+bio-longread-alignment:
+  category: long-read-sequencing
+  description: Align long reads using minimap2 for Oxford Nanopore and PacBio data.
+    Supports various presets for different read types and applications. Use when aligning
+    ONT or PacBio reads to a reference genome for variant calling, SV detection, or
+    coverage analysis.
+  subcategory: long-read-alignment
+  version: '1.0'
+bio-longread-medaka:
+  category: long-read-sequencing
+  description: Polish assemblies and call variants from Oxford Nanopore data using
+    medaka. Uses neural networks trained on specific basecaller versions. Use when
+    improving ONT-only assemblies or calling variants from Nanopore data without short-read
+    polishing.
+  subcategory: medaka-polishing
+  version: '1.0'
+bio-longread-qc:
+  category: long-read-sequencing
+  description: Quality control for long-read sequencing data using NanoPlot, NanoStat,
+    and chopper. Generate QC reports, filter reads by length and quality, and visualize
+    read characteristics. Use when assessing ONT or PacBio run quality or filtering
+    reads before assembly or alignment.
+  subcategory: long-read-qc
+  version: '1.0'
+bio-longread-structural-variants:
+  category: long-read-sequencing
+  description: Detect structural variants from long-read alignments using Sniffles,
+    cuteSV, and SVIM. Use when detecting deletions, insertions, inversions, translocations,
+    or complex rearrangements from ONT or PacBio data, especially those missed by
+    short-read methods.
+  subcategory: structural-variants
+  version: '1.0'
+bio-machine-learning-atlas-mapping:
+  category: machine-learning
+  description: Maps query single-cell data to reference atlases using scArches transfer
+    learning with scVI and scANVI models. Transfers cell type labels without retraining
+    on combined data. Use when annotating new single-cell datasets using pre-trained
+    reference models.
+  subcategory: atlas-mapping
+  version: '1.0'
+bio-machine-learning-biomarker-discovery:
+  category: machine-learning
+  description: Selects informative features for biomarker discovery using Boruta all-relevant
+    selection, mRMR minimum redundancy, and LASSO regularization. Use when identifying
+    biomarkers from high-dimensional omics data.
+  subcategory: biomarker-discovery
+  version: '1.0'
+bio-machine-learning-model-validation:
+  category: machine-learning
+  description: Implements nested cross-validation and stratified splits for unbiased
+    model evaluation on biomedical datasets. Prevents data leakage and overfitting
+    in biomarker discovery. Use when validating classifiers or optimizing hyperparameters
+    on omics data.
+  subcategory: model-validation
+  version: '1.0'
+bio-machine-learning-omics-classifiers:
+  category: machine-learning
+  description: Builds classification models for omics data using RandomForest, XGBoost,
+    and logistic regression with sklearn-compatible APIs. Includes proper preprocessing
+    and evaluation metrics for biomarker classifiers. Use when building diagnostic
+    or prognostic classifiers from expression or variant data.
+  subcategory: omics-classifiers
+  version: '1.0'
+bio-machine-learning-prediction-explanation:
+  category: machine-learning
+  description: Explains machine learning predictions on omics data using SHAP values
+    and LIME for feature attribution. Identifies which genes or features drive classifier
+    decisions. Use when interpreting biomarker classifiers or understanding model
+    predictions.
+  subcategory: prediction-explanation
+  version: '1.0'
+bio-machine-learning-survival-analysis:
+  category: machine-learning
+  description: Analyzes time-to-event data using Kaplan-Meier curves, log-rank tests,
+    and Cox proportional hazards regression with lifelines. Builds survival models
+    from clinical and omics features. Use when predicting patient survival or modeling
+    time-to-event outcomes.
+  subcategory: survival-analysis
+  version: '1.0'
+bio-metabolomics-lipidomics:
+  category: metabolomics
+  description: Specialized lipidomics analysis for lipid identification, quantification,
+    and pathway interpretation. Covers LC-MS lipidomics with LipidSearch, MS-DIAL,
+    and LipidMaps annotation. Use when analyzing lipid classes, chain composition,
+    or lipid-specific pathways.
+  subcategory: lipidomics
+  version: '1.0'
+bio-metabolomics-metabolite-annotation:
+  category: metabolomics
+  description: Metabolite identification from m/z and retention time. Covers database
+    matching, MS/MS spectral matching, and confidence level assignment. Use when assigning
+    compound identities to detected features in untargeted metabolomics.
+  subcategory: metabolite-annotation
+  version: '1.0'
+bio-metabolomics-msdial-preprocessing:
+  category: metabolomics
+  description: MS-DIAL-based metabolomics preprocessing as alternative to XCMS. Covers
+    peak detection, alignment, annotation, and export for downstream analysis. Use
+    when processing MS-DIAL output files for R/Python analysis or when preferring
+    GUI-based preprocessing.
+  subcategory: msdial-preprocessing
+  version: '1.0'
+bio-metabolomics-normalization-qc:
+  category: metabolomics
+  description: Quality control and normalization for metabolomics data. Covers QC-based
+    correction, batch effect removal, and data transformation methods. Use when correcting
+    technical variation in metabolomics data before statistical analysis.
+  subcategory: normalization-qc
+  version: '1.0'
+bio-metabolomics-pathway-mapping:
+  category: metabolomics
+  description: Map metabolites to biological pathways using KEGG, Reactome, and MetaboAnalyst.
+    Perform pathway enrichment and topology analysis. Use when interpreting metabolomics
+    results in the context of biochemical pathways.
+  subcategory: pathway-mapping
+  version: '1.0'
+bio-metabolomics-statistical-analysis:
+  category: metabolomics
+  description: Statistical analysis for metabolomics data. Covers preprocessing (log2
+    transformation, normalization), limma moderated testing with empirical Bayes,
+    Welch's t-tests with BH correction, fold change estimation, and multivariate methods
+    (PCA, PLS-DA, OPLS-DA). Use when identifying differentially abundant metabolites
+    or building classification models.
+  subcategory: statistical-analysis
+  version: '1.0'
+bio-metabolomics-targeted-analysis:
+  category: metabolomics
+  description: Targeted metabolomics analysis using MRM/SRM with standard curves.
+    Covers absolute quantification, method validation, and quality assessment. Use
+    when quantifying specific metabolites using calibration curves and internal standards.
+  subcategory: targeted-analysis
+  version: '1.0'
+bio-metabolomics-xcms-preprocessing:
+  category: metabolomics
+  description: XCMS3 workflow for LC-MS/MS metabolomics preprocessing. Covers peak
+    detection, retention time alignment, correspondence (grouping), and gap filling.
+    Use when processing raw LC-MS data into a feature table for untargeted metabolomics.
+  subcategory: xcms-preprocessing
+  version: '1.0'
+bio-metagenomics-abundance:
+  category: metagenomics
+  description: Species abundance estimation using Bracken with Kraken2 output. Redistributes
+    reads from higher taxonomic levels to species for more accurate estimates. Use
+    when accurate species-level abundances are needed from Kraken2 classification
+    output.
+  subcategory: abundance-estimation
+  version: '1.0'
+bio-metagenomics-amr-detection:
+  category: metagenomics
+  description: Detect antimicrobial resistance genes using AMRFinderPlus, ResFinder,
+    and CARD. Screen isolates and metagenomes for resistance determinants. Use when
+    characterizing resistance profiles in clinical isolates, surveillance samples,
+    or metagenomic data.
+  subcategory: amr-detection
+  version: '1.0'
+bio-metagenomics-functional-profiling:
+  category: metagenomics
+  description: Profile functional potential of metagenomes using HUMAnN3 and similar
+    tools. Use when obtaining pathway abundances, gene family counts, or functional
+    annotations from metagenomic data.
+  subcategory: functional-profiling
+  version: '1.0'
+bio-metagenomics-kraken:
+  category: metagenomics
+  description: Taxonomic classification of metagenomic reads using Kraken2. Fast k-mer
+    based classification against RefSeq database. Use when performing initial taxonomic
+    classification of shotgun metagenomic reads before abundance estimation with Bracken.
+  subcategory: kraken-classification
+  version: '1.0'
+bio-metagenomics-metaphlan:
+  category: metagenomics
+  description: Marker gene-based taxonomic profiling using MetaPhlAn 4. Provides accurate
+    species-level relative abundances using clade-specific markers. Use when accurate
+    taxonomic profiling is needed and computational resources are limited, or for
+    comparison with HMP/other MetaPhlAn studies.
+  subcategory: metaphlan-profiling
+  version: '1.0'
+bio-metagenomics-strain-tracking:
+  category: metagenomics
+  description: Track bacterial strains using MASH, sourmash, fastANI, and inStrain.
+    Compare genomes, detect contamination, and monitor strain-level variation. Use
+    when needing sub-species resolution for outbreak tracking, transmission analysis,
+    or within-host strain dynamics.
+  subcategory: strain-tracking
+  version: '1.0'
+bio-metagenomics-visualization:
+  category: metagenomics
+  description: Visualize metagenomic profiles using R (phyloseq, microbiome) and Python
+    (matplotlib, seaborn). Create stacked bar plots, heatmaps, PCA plots, and diversity
+    analyses. Use when creating publication-quality figures from MetaPhlAn, Bracken,
+    or other taxonomic profiling output.
+  subcategory: metagenome-visualization
+  version: '1.0'
+bio-methylation-based-detection:
+  category: liquid-biopsy
+  description: Analyzes cfDNA methylation patterns for cancer detection using cfMeDIP-seq
+    or bisulfite sequencing with MethylDackel. Identifies cancer-specific methylation
+    signatures and performs tissue-of-origin deconvolution. Use when using methylation
+    biomarkers for early cancer detection or minimal residual disease.
+  subcategory: methylation-based-detection
+  version: '1.0'
+bio-methylation-bismark-alignment:
+  category: methylation-analysis
+  description: Bisulfite sequencing read alignment using Bismark with bowtie2/hisat2.
+    Handles genome preparation and produces BAM files with methylation information.
+    Use when aligning WGBS, RRBS, or other bisulfite-converted sequencing reads to
+    a reference genome.
+  subcategory: bismark-alignment
+  version: '1.0'
+bio-methylation-calling:
+  category: methylation-analysis
+  description: Extract methylation calls from Bismark BAM files using bismark_methylation_extractor.
+    Generates per-cytosine reports for CpG, CHG, and CHH contexts. Use when extracting
+    methylation levels from aligned bisulfite sequencing data for downstream analysis.
+  subcategory: methylation-calling
+  version: '1.0'
+bio-methylation-differential-cpg:
+  category: methylation-analysis
+  description: Per-CpG differential methylation testing from bisulfite sequencing
+    count data or beta-value matrices. Covers beta and M-value computation, coverage
+    filtering, statistical tests (Welch t-test, Mann-Whitney, limma, DSS beta-binomial),
+    multiple testing correction, and effect size calculation. Use when comparing methylation
+    at individual CpG sites between experimental groups from WGBS, RRBS, or targeted
+    bisulfite sequencing.
+  subcategory: differential-cpg-testing
+  version: '1.0'
+bio-methylation-dmr-detection:
+  category: methylation-analysis
+  description: Differentially methylated region (DMR) detection using methylKit tiles,
+    bsseq BSmooth, and DMRcate. Use when identifying contiguous genomic regions with
+    methylation differences between experimental conditions or cell types.
+  subcategory: dmr-detection
+  version: '1.0'
+bio-methylation-methylkit:
+  category: methylation-analysis
+  description: DNA methylation analysis with methylKit in R. Import Bismark coverage
+    files, filter by coverage, normalize samples, and perform statistical comparisons.
+    Use when analyzing single-base methylation patterns, comparing samples, or preparing
+    data for DMR detection.
+  subcategory: methylkit-analysis
+  version: '1.0'
+bio-microbiome-amplicon-processing:
+  category: microbiome
+  description: Amplicon sequence variant (ASV) inference from 16S rRNA or ITS amplicon
+    sequencing using DADA2. Covers quality filtering, error learning, denoising, and
+    chimera removal. Use when processing demultiplexed amplicon FASTQ files to generate
+    an ASV table for downstream analysis.
+  subcategory: amplicon-processing
+  version: '1.0'
+bio-microbiome-differential-abundance:
+  category: microbiome
+  description: Differential abundance testing for microbiome data using compositionally-aware
+    methods like ALDEx2, ANCOM-BC2, and MaAsLin2. Use when identifying taxa that differ
+    between experimental groups while accounting for the compositional nature of microbiome
+    data.
+  subcategory: differential-abundance
+  version: '1.0'
+bio-microbiome-diversity-analysis:
+  category: microbiome
+  description: Alpha and beta diversity analysis for microbiome data. Calculate within-sample
+    richness, evenness, and between-sample dissimilarity with phyloseq and vegan.
+    Use when comparing community composition across samples or testing for group differences
+    in microbiome structure.
+  subcategory: diversity-analysis
+  version: '1.0'
+bio-microbiome-functional-prediction:
+  category: microbiome
+  description: Predict metagenome functional content from 16S rRNA marker gene data
+    using PICRUSt2. Infer KEGG, MetaCyc, and EC abundances from ASV tables. Use when
+    functional profiling is needed from 16S data without shotgun metagenomics sequencing.
+  subcategory: functional-prediction
+  version: '1.0'
+bio-microbiome-qiime2-workflow:
+  category: microbiome
+  description: QIIME2 command-line workflow for 16S/ITS amplicon analysis. Alternative
+    to DADA2/phyloseq R workflow with built-in provenance tracking. Use when preferring
+    CLI over R, needing reproducible provenance, or working within QIIME2 ecosystem.
+  subcategory: qiime2-workflow
+  version: '1.0'
+bio-microbiome-taxonomy-assignment:
+  category: microbiome
+  description: Taxonomic classification of ASVs using reference databases like SILVA,
+    GTDB, or UNITE. Covers naive Bayes classifiers (DADA2, IDTAXA) and exact matching
+    approaches. Use when assigning taxonomy to ASVs after DADA2 amplicon processing.
+  subcategory: taxonomy-assignment
+  version: '1.0'
+bio-molecular-descriptors:
+  category: chemoinformatics
+  description: Calculates molecular descriptors and fingerprints using RDKit. Computes
+    Morgan fingerprints (ECFP), MACCS keys, Lipinski properties, QED drug-likeness,
+    TPSA, and 3D conformer descriptors. Use when featurizing molecules for machine
+    learning or filtering by drug-likeness criteria.
+  subcategory: molecular-descriptors
+  version: '1.0'
+bio-molecular-io:
+  category: chemoinformatics
+  description: Reads, writes, and converts molecular file formats (SMILES, SDF, MOL2,
+    PDB) using RDKit and Open Babel. Handles structure parsing, canonicalization,
+    and full standardization pipeline including sanitization, normalization, and tautomer
+    canonicalization. Use when loading chemical libraries, converting formats, or
+    preparing molecules for analysis.
+  subcategory: molecular-io
+  version: '1.0'
+bio-motif-search:
+  category: sequence-manipulation
+  description: Find patterns, motifs, and subsequences in biological sequences using
+    Biopython. Use when searching for transcription factor binding sites, regulatory
+    elements, or any sequence pattern. For restriction enzyme analysis, use the restriction-analysis
+    skill.
+  subcategory: motif-search
+  version: '1.0'
+bio-multi-omics-data-harmonization:
+  category: multi-omics-integration
+  description: Preprocessing and harmonization of multi-omics data before integration.
+    Covers normalization, batch correction, feature alignment, and missing value handling
+    across data types. Use when preparing multi-omics datasets for integration analysis.
+  subcategory: data-harmonization
+  version: '1.0'
+bio-multi-omics-mixomics-analysis:
+  category: multi-omics-integration
+  description: Supervised and unsupervised multi-omics integration with mixOmics.
+    Includes sPLS for pairwise integration and DIABLO for multi-block discriminant
+    analysis. Use when performing supervised multi-omics integration or identifying
+    features that discriminate between groups.
+  subcategory: mixomics-analysis
+  version: '1.0'
+bio-multi-omics-mofa-integration:
+  category: multi-omics-integration
+  description: Multi-Omics Factor Analysis (MOFA2) for unsupervised integration of
+    multiple data modalities. Identifies shared and view-specific sources of variation.
+    Use when integrating RNA-seq, proteomics, methylation, or other omics to discover
+    latent factors driving biological variation across modalities.
+  subcategory: mofa-integration
+  version: '1.0'
+bio-multi-omics-similarity-network:
+  category: multi-omics-integration
+  description: Similarity Network Fusion (SNF) for patient stratification using multi-omics
+    data. Integrates multiple data types into a unified patient similarity network.
+    Use when performing patient stratification or integrating multi-omics data into
+    unified similarity networks.
+  subcategory: similarity-network
+  version: '1.0'
+bio-paired-end-fastq:
+  category: sequence-io
+  description: Handle paired-end FASTQ files (R1/R2) using Biopython. Use when working
+    with Illumina paired reads, synchronizing pairs, interleaving/deinterleaving,
+    or filtering paired data.
+  subcategory: paired-end-fastq
+  version: '1.0'
+bio-pathway-enrichment-visualization:
+  category: pathway-analysis
+  description: Visualize enrichment results using enrichplot package functions. Use
+    when creating publication-quality figures from clusterProfiler results. Covers
+    dotplot, barplot, cnetplot, emapplot, gseaplot2, ridgeplot, and treeplot.
+  subcategory: enrichment-visualization
+  version: '1.0'
+bio-pathway-go-enrichment:
+  category: pathway-analysis
+  description: Gene Ontology over-representation analysis using clusterProfiler enrichGO.
+    Use when identifying biological functions enriched in a gene list from differential
+    expression or other analyses. Supports all three ontologies (BP, MF, CC), multiple
+    ID types, and customizable statistical thresholds.
+  subcategory: go-enrichment
+  version: '1.0'
+bio-pathway-gsea:
+  category: pathway-analysis
+  description: Gene Set Enrichment Analysis using clusterProfiler gseGO and gseKEGG.
+    Use when analyzing ranked gene lists to find coordinated expression changes in
+    gene sets without arbitrary significance cutoffs. Detects subtle but coordinated
+    expression changes.
+  subcategory: gsea
+  version: '1.0'
+bio-pathway-kegg-pathways:
+  category: pathway-analysis
+  description: KEGG pathway and module enrichment analysis using clusterProfiler enrichKEGG
+    and enrichMKEGG. Use when identifying metabolic and signaling pathways over-represented
+    in a gene list. Supports 4000+ organisms via KEGG online database.
+  subcategory: kegg-pathways
+  version: '1.0'
+bio-pathway-reactome:
+  category: pathway-analysis
+  description: Reactome pathway enrichment using ReactomePA package. Use when analyzing
+    gene lists against Reactome's curated peer-reviewed pathway database. Performs
+    over-representation analysis and GSEA with visualization and pathway hierarchy
+    exploration.
+  subcategory: reactome-pathways
+  version: '1.0'
+bio-pathway-wikipathways:
+  category: pathway-analysis
+  description: WikiPathways enrichment using clusterProfiler and rWikiPathways. Use
+    when analyzing gene lists against community-curated open-source pathways. Performs
+    over-representation analysis and GSEA for 30+ species.
+  subcategory: wikipathways
+  version: '1.0'
+bio-pdb-geometric-analysis:
+  category: structural-biology
+  description: Perform geometric calculations on protein structures using Biopython
+    Bio.PDB. Use when measuring distances, angles, and dihedrals, superimposing structures,
+    calculating RMSD, or computing solvent accessible surface area (SASA).
+  subcategory: geometric-analysis
+  version: '1.0'
+bio-pdb-structure-io:
+  category: structural-biology
+  description: Parse and write protein structure files using Biopython Bio.PDB. Use
+    when reading PDB, mmCIF, and MMTF files, downloading structures from RCSB PDB,
+    or writing structures to various formats.
+  subcategory: structure-io
+  version: '1.0'
+bio-pdb-structure-modification:
+  category: structural-biology
+  description: Modify protein structures using Biopython Bio.PDB. Use when transforming
+    coordinates, removing atoms or residues, adding new entities, modifying B-factors
+    and occupancies, or building structures programmatically.
+  subcategory: structure-modification
+  version: '1.0'
+bio-pdb-structure-navigation:
+  category: structural-biology
+  description: Navigate protein structure hierarchy using Biopython Bio.PDB SMCRA
+    model. Use when accessing models, chains, residues, and atoms, iterating over
+    structure levels, or extracting sequences from PDB files.
+  subcategory: structure-navigation
+  version: '1.0'
+bio-phasing-imputation-genotype-imputation:
+  category: phasing-imputation
+  description: Impute missing genotypes using reference panels with Beagle or Minimac4.
+    Use when increasing variant density for GWAS, harmonizing data across genotyping
+    platforms, or inferring variants not directly typed in array data.
+  subcategory: genotype-imputation
+  version: '1.0'
+bio-phasing-imputation-haplotype-phasing:
+  category: phasing-imputation
+  description: Phase genotypes into haplotypes using Beagle or SHAPEIT. Resolves which
+    alleles are inherited together on each chromosome. Use when preparing VCF files
+    for imputation, HLA typing, or population genetic analyses requiring phased haplotypes.
+  subcategory: haplotype-phasing
+  version: '1.0'
+bio-phasing-imputation-imputation-qc:
+  category: phasing-imputation
+  description: Quality control of phasing and imputation results. Filter by INFO scores,
+    assess accuracy, and prepare imputed data for downstream analysis. Use when filtering
+    low-quality imputed variants or validating imputation accuracy before GWAS.
+  subcategory: imputation-qc
+  version: '1.0'
+bio-phasing-imputation-reference-panels:
+  category: phasing-imputation
+  description: Download, prepare, and manage reference panels for phasing and imputation.
+    Covers 1000 Genomes, HRC, and TOPMed panels. Use when setting up imputation infrastructure
+    or selecting appropriate reference panels for target populations.
+  subcategory: reference-panels
+  version: '1.0'
+bio-phylo-bayesian-inference:
+  category: phylogenetics
+  description: Run Bayesian phylogenetic analysis with MrBayes, BEAST2, RevBayes,
+    and PhyloBayes including MCMC convergence diagnostics and model comparison. Use
+    when needing posterior probability support, Bayesian model averaging, site-heterogeneous
+    models for deep phylogenies, or formal model comparison via stepping-stone sampling.
+  subcategory: bayesian-inference
+  version: '1.0'
+bio-phylo-distance-calculations:
+  category: phylogenetics
+  description: Compute evolutionary distances and build phylogenetic trees using Biopython
+    Bio.Phylo.TreeConstruction. Use when creating distance matrices from alignments,
+    building NJ/UPGMA trees, generating bootstrap consensus, or needing quick exploratory
+    phylogenies before running full ML analysis.
+  subcategory: distance-calculations
+  version: '1.0'
+bio-phylo-divergence-dating:
+  category: phylogenetics
+  description: Estimate divergence times using molecular clock models with BEAST2,
+    MCMCTree, and TreePL. Use when dating speciation events, calibrating phylogenies
+    with fossils, choosing between strict and relaxed clock models, or estimating
+    evolutionary rates across lineages.
+  subcategory: divergence-dating
+  version: '1.0'
+bio-phylo-modern-tree-inference:
+  category: phylogenetics
+  description: Build maximum likelihood phylogenetic trees using IQ-TREE2 and RAxML-NG
+    with expert model selection, branch support assessment, and topology testing.
+    Use when inferring publication-quality ML trees, selecting substitution models,
+    interpreting bootstrap and concordance factor support, or running partitioned
+    phylogenomic analyses.
+  subcategory: modern-tree-inference
+  version: '1.0'
+bio-phylo-species-trees:
+  category: phylogenetics
+  description: Estimate species trees using coalescent methods including ASTRAL-III,
+    wASTRAL, ASTRAL-Pro, SVDQuartets, and BPP. Use when multi-locus data shows gene
+    tree discordance from incomplete lineage sorting, when in the anomaly zone where
+    concatenation is misleading, or when computing concordance factors to assess topological
+    support.
+  subcategory: species-trees
+  version: '1.0'
+bio-phylo-tree-io:
+  category: phylogenetics
+  description: Read, write, and convert phylogenetic tree files using Biopython Bio.Phylo.
+    Use when parsing Newick, Nexus, PhyloXML, or NeXML tree formats, converting between
+    formats, or handling multiple trees.
+  subcategory: tree-io
+  version: '1.0'
+bio-phylo-tree-manipulation:
+  category: phylogenetics
+  description: Modify phylogenetic tree structure using Biopython Bio.Phylo. Use when
+    rooting trees with outgroups, midpoint, or MAD methods, pruning taxa, collapsing
+    clades, ladderizing branches, or extracting subtrees. Includes rooting method
+    decision guidance.
+  subcategory: tree-manipulation
+  version: '1.0'
+bio-phylo-tree-visualization:
+  category: phylogenetics
+  description: Draw and export phylogenetic trees using Biopython Bio.Phylo with matplotlib
+    and modern alternatives. Use when creating tree figures, customizing colors and
+    labels, exporting to image formats, or choosing between Bio.Phylo, ggtree, ETE4,
+    and iTOL for publication.
+  subcategory: tree-visualization
+  version: '1.0'
+bio-pileup-generation:
+  category: alignment-files
+  description: Generate pileup data for variant calling using samtools mpileup and
+    pysam. Use when preparing data for variant calling, analyzing per-position read
+    data, or calculating allele frequencies.
+  subcategory: pileup-generation
+  version: '1.0'
+bio-population-genetics-association-testing:
+  category: population-genetics
+  description: Genome-wide association studies (GWAS) with PLINK. Perform case-control
+    and quantitative trait association testing using logistic/linear regression with
+    covariates, generate Manhattan and QQ plots for result visualization. Use when
+    running GWAS or association tests.
+  subcategory: association-testing
+  version: '1.0'
+bio-population-genetics-linkage-disequilibrium:
+  category: population-genetics
+  description: Calculate linkage disequilibrium statistics (r², D'), perform LD pruning
+    for population structure analysis, identify haplotype blocks, and visualize LD
+    patterns using PLINK, scikit-allel, and LDBlockShow. Use when calculating LD or
+    pruning variants.
+  subcategory: linkage-disequilibrium
+  version: '1.0'
+bio-population-genetics-plink-basics:
+  category: population-genetics
+  description: PLINK file formats, format conversion, and quality control filtering
+    for population genetics. Convert between VCF, BED/BIM/FAM, and PED/MAP formats,
+    apply MAF, genotyping rate, and HWE filters using PLINK 1.9 and 2.0. Use when
+    working with PLINK format files or running QC.
+  subcategory: plink-basics
+  version: '1.0'
+bio-population-genetics-population-structure:
+  category: population-genetics
+  description: Analyze population structure using PCA and admixture analysis with
+    PLINK and ADMIXTURE. Identify population clusters, assess ancestry proportions,
+    visualize genetic structure, and choose optimal K for admixture models. Use when
+    analyzing population stratification with PCA or admixture.
+  subcategory: population-structure
+  version: '1.0'
+bio-population-genetics-scikit-allel-analysis:
+  category: population-genetics
+  description: Python population genetics with scikit-allel. Read VCF files, compute
+    allele frequencies, calculate diversity statistics, perform PCA, and run selection
+    scans using GenotypeArray and HaplotypeArray data structures. Use when analyzing
+    population genetics in Python.
+  subcategory: scikit-allel-analysis
+  version: '1.0'
+bio-population-genetics-selection-statistics:
+  category: population-genetics
+  description: Detect signatures of natural selection using Fst, Tajima's D, iHS,
+    XP-EHH, and other selection statistics. Calculate population differentiation,
+    test for departures from neutrality, and identify selective sweeps with scikit-allel
+    and vcftools. Use when computing selection signatures like Fst or Tajima's D.
+  subcategory: selection-statistics
+  version: '1.0'
+bio-primer-design-primer-basics:
+  category: primer-design
+  description: Design PCR primers for a target sequence using primer3-py. Specify
+    target regions, product size, melting temperature, and other constraints. Returns
+    ranked primer pairs with quality metrics. Use when designing standard PCR primers.
+  subcategory: primer-basics
+  version: '1.0'
+bio-primer-design-primer-validation:
+  category: primer-design
+  description: Validate PCR primers for specificity, dimers, hairpins, and secondary
+    structures using primer3-py thermodynamic calculations. Check self-complementarity,
+    heterodimer formation, and 3' stability. Use when validating primer specificity
+    and properties.
+  subcategory: primer-validation
+  version: '1.0'
+bio-primer-design-qpcr-primers:
+  category: primer-design
+  description: Design qPCR primers and TaqMan/molecular beacon probes using primer3-py.
+    Configure probe Tm, primer-probe spacing, and hydrolysis probe constraints for
+    real-time PCR assays. Use when designing qPCR primers and probes.
+  subcategory: qpcr-primers
+  version: '1.0'
+bio-proteomics-data-import:
+  category: proteomics
+  description: Load and parse mass spectrometry data formats including mzML, mzXML,
+    and quantification tool outputs like MaxQuant proteinGroups.txt. Use when starting
+    a proteomics analysis with raw or processed MS data. Handles contaminant filtering
+    and missing value assessment.
+  subcategory: data-import
+  version: '1.0'
+bio-proteomics-dia-analysis:
+  category: proteomics
+  description: Data-independent acquisition (DIA) proteomics analysis with DIA-NN
+    and other tools. Use when analyzing DIA mass spectrometry data with library-free
+    or library-based workflows for deep proteome profiling.
+  subcategory: dia-analysis
+  version: '1.0'
+bio-proteomics-differential-abundance:
+  category: proteomics
+  description: Statistical testing for differentially abundant proteins between conditions.
+    Covers preprocessing (log2 transformation, normalization), limma and DEqMS workflows
+    with empirical Bayes moderation, fold change shrinkage for accurate effect size
+    estimation, and Python alternatives. Use when identifying proteins with significant
+    abundance changes between experimental groups.
+  subcategory: differential-abundance
+  version: '1.0'
+bio-proteomics-peptide-identification:
+  category: proteomics
+  description: Peptide-spectrum matching and protein identification from MS/MS data.
+    Use when identifying peptides from tandem mass spectra. Covers database searching,
+    spectral library matching, and FDR estimation using target-decoy approaches.
+  subcategory: peptide-identification
+  version: '1.0'
+bio-proteomics-protein-inference:
+  category: proteomics
+  description: Protein grouping and inference from peptide identifications. Use when
+    resolving protein ambiguity from shared peptides. Handles protein groups and protein-level
+    FDR control using parsimony and probabilistic approaches.
+  subcategory: protein-inference
+  version: '1.0'
+bio-proteomics-proteomics-qc:
+  category: proteomics
+  description: Quality control and assessment for proteomics data. Use when evaluating
+    proteomics data quality before downstream analysis. Covers sample metrics, missing
+    value patterns, replicate correlation, batch effects, and intensity distributions.
+  subcategory: proteomics-qc
+  version: '1.0'
+bio-proteomics-ptm-analysis:
+  category: proteomics
+  description: Post-translational modification analysis including phosphorylation,
+    acetylation, and ubiquitination. Covers site localization, motif analysis, and
+    quantitative PTM analysis. Use when analyzing phosphoproteomic data or other modification-enriched
+    samples.
+  subcategory: ptm-analysis
+  version: '1.0'
+bio-proteomics-quantification:
+  category: proteomics
+  description: Protein quantification from mass spectrometry data including label-free
+    (LFQ, intensity-based), isobaric labeling (TMT, iTRAQ), and metabolic labeling
+    (SILAC) approaches. Use when extracting protein abundances from MS data for differential
+    analysis.
+  subcategory: quantification
+  version: '1.0'
+bio-proteomics-spectral-libraries:
+  category: proteomics
+  description: Build, manage, and search spectral libraries for proteomics. Use when
+    creating or working with spectral libraries for DIA analysis. Covers DDA-based
+    library generation, predicted libraries (Prosit, DeepLC), and library formats.
+  subcategory: spectral-libraries
+  version: '1.0'
+bio-reaction-enumeration:
+  category: chemoinformatics
+  description: Enumerates chemical libraries through reaction SMARTS transformations
+    using RDKit. Generates virtual compound libraries from building blocks using defined
+    chemical reactions with product validation. Use when creating combinatorial libraries
+    or enumerating products from synthetic routes.
+  subcategory: reaction-enumeration
+  version: '1.0'
+bio-read-alignment-bowtie2-alignment:
+  category: read-alignment
+  description: Align short reads using Bowtie2 with local or end-to-end modes. Supports
+    gapped alignment. Use when aligning ChIP-seq, ATAC-seq, or when flexible alignment
+    modes are needed.
+  subcategory: bowtie2-alignment
+  version: '1.0'
+bio-read-alignment-bwa-alignment:
+  category: read-alignment
+  description: Align DNA short reads to reference genomes using bwa-mem2, the faster
+    successor to BWA-MEM. Use when aligning DNA short reads to a reference genome.
+  subcategory: bwa-alignment
+  version: '1.0'
+bio-read-alignment-hisat2-alignment:
+  category: read-alignment
+  description: Align RNA-seq reads with HISAT2, a memory-efficient splice-aware aligner.
+    Use when STAR's memory requirements are too high or for general RNA-seq alignment.
+  subcategory: hisat2-alignment
+  version: '1.0'
+bio-read-alignment-star-alignment:
+  category: read-alignment
+  description: Align RNA-seq reads with STAR (Spliced Transcripts Alignment to a Reference).
+    Supports two-pass mode for novel splice junction discovery. Use when aligning
+    RNA-seq data requiring splice-aware alignment.
+  subcategory: star-alignment
+  version: '1.0'
+bio-read-qc-adapter-trimming:
+  category: read-qc
+  description: Remove sequencing adapters from FASTQ files using Cutadapt and Trimmomatic.
+    Supports single-end and paired-end reads, Illumina TruSeq, Nextera, and custom
+    adapter sequences. Use when FastQC shows adapter contamination or before alignment
+    of short reads.
+  subcategory: adapter-trimming
+  version: '1.0'
+bio-read-qc-contamination-screening:
+  category: read-qc
+  description: Detect sample contamination and cross-species reads using FastQ Screen.
+    Screen reads against multiple reference genomes to identify bacterial, viral,
+    adapter, or sample swap contamination. Use when suspecting cross-contamination
+    or working with samples prone to microbial contamination.
+  subcategory: contamination-screening
+  version: '1.0'
+bio-read-qc-fastp-workflow:
+  category: read-qc
+  description: All-in-one read preprocessing with fastp including adapter trimming,
+    quality filtering, deduplication, base correction, and HTML report generation.
+    Use when preprocessing Illumina data and wanting a single fast tool instead of
+    separate Cutadapt, Trimmomatic, and FastQC steps.
+  subcategory: fastp-workflow
+  version: '1.0'
+bio-read-qc-quality-filtering:
+  category: read-qc
+  description: Filter reads by quality scores, length, and N content using Trimmomatic
+    and fastp. Apply sliding window trimming, remove low-quality bases from read ends,
+    and discard reads below thresholds. Use when reads have poor quality tails or
+    require minimum quality for downstream analysis.
+  subcategory: quality-filtering
+  version: '1.0'
+bio-read-qc-quality-reports:
+  category: read-qc
+  description: Generate and interpret quality reports from FASTQ files using FastQC
+    and MultiQC. Assess per-base quality, adapter content, GC bias, duplication levels,
+    and overrepresented sequences. Use when performing initial QC on raw sequencing
+    data or validating preprocessing results.
+  subcategory: quality-reports
+  version: '1.0'
+bio-read-qc-umi-processing:
+  category: read-qc
+  description: Extract, process, and deduplicate reads using Unique Molecular Identifiers
+    (UMIs) with umi_tools. Use when library prep includes UMIs and accurate molecule
+    counting is needed, such as in single-cell RNA-seq, low-input RNA-seq, or targeted
+    sequencing to distinguish PCR from biological duplicates.
+  subcategory: umi-processing
+  version: '1.0'
+bio-read-sequences:
+  category: sequence-io
+  description: Read biological sequence files (FASTA, FASTQ, GenBank, EMBL, ABI, SFF)
+    using Biopython Bio.SeqIO. Use when parsing sequence files, iterating multi-sequence
+    files, random access to large files, or high-performance parsing.
+  subcategory: read-sequences
+  version: '1.0'
+bio-reference-operations:
+  category: alignment-files
+  description: Generate consensus sequences and manage reference files using samtools.
+    Use when creating consensus from alignments, indexing references, or creating
+    sequence dictionaries.
+  subcategory: reference-operations
+  version: '1.0'
+bio-reporting-automated-qc-reports:
+  category: reporting
+  description: Generates standardized quality control reports by aggregating metrics
+    from FastQC, alignment, and other tools using MultiQC. Use when summarizing QC
+    metrics across samples, creating shareable quality reports, or building automated
+    QC pipelines.
+  subcategory: automated-qc-reports
+  version: '1.0'
+bio-reporting-figure-export:
+  category: reporting
+  description: Exports publication-ready figures in various formats with proper resolution,
+    sizing, and typography. Use when preparing figures for journal submission, creating
+    vector graphics for presentations, or ensuring consistent figure styling across
+    analyses.
+  subcategory: figure-export
+  version: '1.0'
+bio-reporting-jupyter-reports:
+  category: reporting
+  description: Creates reproducible Jupyter notebooks for bioinformatics analysis
+    with parameterization using papermill. Use when generating automated analysis
+    reports, running notebook-based pipelines, or creating shareable computational
+    notebooks.
+  subcategory: jupyter-reports
+  version: '1.0'
+bio-reporting-quarto-reports:
+  category: reporting
+  description: Build reproducible scientific documents, presentations, and websites
+    with Quarto supporting R, Python, Julia, and Observable JS. Use when creating
+    reproducible reports with Quarto.
+  subcategory: quarto-reports
+  version: '1.0'
+bio-reporting-rmarkdown-reports:
+  category: reporting
+  description: Create reproducible bioinformatics analysis reports with R Markdown
+    including code, results, and visualizations in HTML, PDF, or Word format. Use
+    when generating analysis reports with RMarkdown.
+  subcategory: rmarkdown-reports
+  version: '1.0'
+bio-restriction-enzyme-selection:
+  category: restriction-analysis
+  description: Select restriction enzymes by criteria using Biopython Bio.Restriction.
+    Find enzymes that cut once, don't cut, produce specific overhangs, are commercially
+    available, or have compatible ends for cloning. Use when selecting restriction
+    enzymes for cloning or analysis.
+  subcategory: enzyme-selection
+  version: '1.0'
+bio-restriction-fragment-analysis:
+  category: restriction-analysis
+  description: Analyze restriction digest fragments using Biopython Bio.Restriction.
+    Predict fragment sizes, get fragment sequences, simulate gel electrophoresis patterns,
+    and perform double digests. Use when analyzing restriction digest fragment patterns.
+  subcategory: fragment-analysis
+  version: '1.0'
+bio-restriction-mapping:
+  category: restriction-analysis
+  description: Create restriction maps showing enzyme cut positions on DNA sequences
+    using Biopython Bio.Restriction. Visualize cut sites, calculate distances between
+    sites, and generate text or graphical maps. Use when creating or analyzing restriction
+    maps.
+  subcategory: restriction-mapping
+  version: '1.0'
+bio-restriction-sites:
+  category: restriction-analysis
+  description: Find restriction enzyme cut sites in DNA sequences using Biopython
+    Bio.Restriction. Search with single enzymes, batches of enzymes, or commercially
+    available enzyme sets. Returns cut positions for linear or circular DNA. Use when
+    finding restriction enzyme cut sites in sequences.
+  subcategory: restriction-sites
+  version: '1.0'
+bio-reverse-complement:
+  category: sequence-manipulation
+  description: Generate reverse complements and complements of DNA/RNA sequences using
+    Biopython. Use when working with opposite strands, primer design, or converting
+    between template and coding strands.
+  subcategory: reverse-complement
+  version: '1.0'
+bio-ribo-seq-orf-detection:
+  category: ribo-seq
+  description: Detect and quantify translated ORFs from Ribo-seq data including uORFs
+    and novel ORFs using RiboCode and ORFquant. Use when identifying translated regions
+    beyond annotated coding sequences or quantifying ORF-level translation.
+  subcategory: orf-detection
+  version: '1.0'
+bio-ribo-seq-riboseq-preprocessing:
+  category: ribo-seq
+  description: Preprocess ribosome profiling data including adapter trimming, size
+    selection, rRNA removal, and alignment. Use when preparing Ribo-seq reads for
+    downstream analysis of translation.
+  subcategory: riboseq-preprocessing
+  version: '1.0'
+bio-ribo-seq-ribosome-periodicity:
+  category: ribo-seq
+  description: Validate Ribo-seq data quality by checking 3-nucleotide periodicity
+    and calculating P-site offsets. Use when assessing library quality or determining
+    read offsets for downstream analysis.
+  subcategory: ribosome-periodicity
+  version: '1.0'
+bio-ribo-seq-ribosome-stalling:
+  category: ribo-seq
+  description: Detect ribosome pausing and stalling sites from Ribo-seq data at codon
+    resolution. Use when studying translational regulation, identifying pause sites,
+    or analyzing codon-specific translation dynamics.
+  subcategory: ribosome-stalling
+  version: '1.0'
+bio-ribo-seq-translation-efficiency:
+  category: ribo-seq
+  description: Calculate translation efficiency (TE) as the ratio of ribosome occupancy
+    to mRNA abundance. Use when comparing translational regulation between conditions
+    or identifying genes with altered translation independent of transcription.
+  subcategory: translation-efficiency
+  version: '1.0'
+bio-rna-quantification-alignment-free-quant:
+  category: rna-quantification
+  description: Quantify transcript expression using pseudo-alignment with Salmon or
+    kallisto. Use when quantifying transcripts with Salmon or kallisto.
+  subcategory: alignment-free-quant
+  version: '1.0'
+bio-rna-quantification-count-matrix-qc:
+  category: rna-quantification
+  description: Quality control and exploration of RNA-seq count matrices before differential
+    expression. Check for outliers, batch effects, and sample relationships. Use when
+    assessing count matrix quality before DE analysis.
+  subcategory: count-matrix-qc
+  version: '1.0'
+bio-rna-quantification-featurecounts-counting:
+  category: rna-quantification
+  description: Count reads per gene from aligned BAM files using Subread featureCounts.
+    Use when processing BAM files from STAR/HISAT2 to generate gene-level counts for
+    DESeq2/edgeR.
+  subcategory: featurecounts-counting
+  version: '1.0'
+bio-rna-quantification-tximport-workflow:
+  category: rna-quantification
+  description: Import transcript-level quantifications from Salmon/kallisto into R
+    for gene-level analysis with DESeq2/edgeR using tximport or tximeta. Use when
+    importing transcript counts into R for DESeq2/edgeR.
+  subcategory: tximport-workflow
+  version: '1.0'
+bio-rna-structure-ncrna-search:
+  category: rna-structure
+  description: Searches for non-coding RNA homologs and classifies RNA families using
+    Infernal covariance model searches against the Rfam database. Identifies structured
+    RNAs by sequence and secondary structure conservation. Use when querying sequences
+    against Rfam, building custom covariance models for novel RNA families, or classifying
+    non-coding transcripts by family.
+  subcategory: ncrna-search
+  version: '1.0'
+bio-rna-structure-secondary-structure-prediction:
+  category: rna-structure
+  description: Predicts RNA secondary structures using minimum free energy folding
+    and partition function analysis with ViennaRNA (RNAfold, RNAalifold, RNAcofold).
+    Computes base-pair probabilities, centroid structures, and consensus structures
+    from alignments. Use when predicting RNA folding, evaluating structural stability,
+    or comparing structures across homologs.
+  subcategory: secondary-structure-prediction
+  version: '1.0'
+bio-rna-structure-structure-probing:
+  category: rna-structure
+  description: Analyzes experimental RNA structure probing data from SHAPE-MaP and
+    DMS-MaPseq experiments using ShapeMapper2. Converts mutation rates to per-nucleotide
+    reactivity profiles that constrain structure prediction. Use when processing SHAPE-MaP
+    or DMS-MaPseq sequencing data to obtain experimental RNA structure information.
+  subcategory: structure-probing
+  version: '1.0'
+bio-rnaseq-qc:
+  category: read-qc
+  description: RNA-seq specific quality control including rRNA contamination detection,
+    strandedness verification, gene body coverage, and transcript integrity metrics.
+    Use when validating RNA-seq libraries before differential expression analysis.
+  subcategory: rnaseq-qc
+  version: '1.0'
+bio-sam-bam-basics:
+  category: alignment-files
+  description: View, convert, and understand SAM/BAM/CRAM alignment files using samtools
+    and pysam. Use when inspecting alignments, converting between formats, or understanding
+    alignment file structure.
+  subcategory: sam-bam-basics
+  version: '1.0'
+bio-sashimi-plots:
+  category: alternative-splicing
+  description: Creates sashimi plots showing RNA-seq read coverage and splice junction
+    counts using ggsashimi or rmats2sashimiplot. Visualizes differential splicing
+    events with grouped samples and junction read support. Use when visualizing specific
+    splicing events or validating differential splicing results.
+  subcategory: sashimi-plots
+  version: '1.0'
+bio-seq-objects:
+  category: sequence-manipulation
+  description: Create and manipulate Seq, MutableSeq, and SeqRecord objects using
+    Biopython. Use when creating sequences from strings, modifying sequence data in-place,
+    or building annotated sequence records.
+  subcategory: seq-objects
+  version: '1.0'
+bio-sequence-properties:
+  category: sequence-manipulation
+  description: Calculate sequence properties like GC content, molecular weight, isoelectric
+    point, and GC skew using Biopython. Use when analyzing sequence composition, computing
+    physical properties, or comparing sequences.
+  subcategory: sequence-properties
+  version: '1.0'
+bio-sequence-similarity:
+  category: database-access
+  description: Find homologous sequences using iterative BLAST (PSI-BLAST), profile
+    HMMs (HMMER), and reciprocal best hit analysis. Use when identifying orthologs,
+    distant homologs, or protein family members where standard BLAST is not sensitive
+    enough.
+  subcategory: sequence-similarity
+  version: '1.0'
+bio-sequence-slicing:
+  category: sequence-manipulation
+  description: Slice, extract, and concatenate biological sequences using Biopython.
+    Use when extracting subsequences, joining sequences, or manipulating sequence
+    regions by position.
+  subcategory: sequence-slicing
+  version: '1.0'
+bio-sequence-statistics:
+  category: sequence-io
+  description: Calculate sequence statistics (N50, length distribution, GC content,
+    summary reports) using Biopython. Use when analyzing sequence datasets, generating
+    QC reports, or comparing assemblies.
+  subcategory: sequence-statistics
+  version: '1.0'
+bio-similarity-searching:
+  category: chemoinformatics
+  description: Performs molecular similarity searches using Tanimoto coefficient on
+    fingerprints via RDKit. Finds structurally similar compounds using ECFP or MACCS
+    keys and clusters molecules by structural similarity using Butina clustering.
+    Use when finding analogs of a query compound or clustering chemical libraries.
+  subcategory: similarity-searching
+  version: '1.0'
+bio-single-cell-batch-integration:
+  category: single-cell
+  description: Integrate multiple scRNA-seq samples/batches using Harmony, scVI, Seurat
+    anchors, and fastMNN. Remove technical variation while preserving biological differences.
+    Use when integrating multiple scRNA-seq batches or datasets.
+  subcategory: batch-integration
+  version: '1.0'
+bio-single-cell-cell-annotation:
+  category: single-cell
+  description: Automated cell type annotation using reference-based methods including
+    CellTypist, scPred, SingleR, and Azimuth for consistent, reproducible cell labeling.
+    Use when automatically annotating cell types using reference datasets.
+  subcategory: cell-annotation
+  version: '1.0'
+bio-single-cell-cell-communication:
+  category: single-cell
+  description: Infer cell-cell communication networks from scRNA-seq data using CellChat,
+    NicheNet, and LIANA for ligand-receptor interaction analysis. Use when inferring
+    ligand-receptor interactions between cell types.
+  subcategory: cell-communication
+  version: '1.0'
+bio-single-cell-clustering:
+  category: single-cell
+  description: Dimensionality reduction and clustering for single-cell RNA-seq using
+    Seurat (R) and Scanpy (Python). Use for running PCA, computing neighbors, clustering
+    with Leiden/Louvain algorithms, generating UMAP/tSNE embeddings, and visualizing
+    clusters. Use when performing dimensionality reduction and clustering on single-cell
+    data.
+  subcategory: clustering
+  version: '1.0'
+bio-single-cell-data-io:
+  category: single-cell
+  description: Read, write, and create single-cell data objects using Seurat (R) and
+    Scanpy (Python). Use for loading 10X Genomics data, importing/exporting h5ad and
+    RDS files, creating Seurat objects and AnnData objects, and converting between
+    formats. Use when loading, saving, or converting single-cell data formats.
+  subcategory: data-io
+  version: '1.0'
+bio-single-cell-doublet-detection:
+  category: single-cell
+  description: Detect and remove doublets (multiple cells captured in one droplet)
+    from single-cell RNA-seq data. Uses Scrublet (Python), DoubletFinder (R), and
+    scDblFinder (R). Essential QC step before clustering to avoid artificial cell
+    populations. Use when identifying and removing doublets from scRNA-seq data.
+  subcategory: doublet-detection
+  version: '1.0'
+bio-single-cell-lineage-tracing:
+  category: single-cell
+  description: Reconstruct cell lineage trees from CRISPR barcode tracing or mitochondrial
+    mutations. Use when studying clonal dynamics, cell fate decisions, or developmental
+    trajectories.
+  subcategory: lineage-tracing
+  version: '1.0'
+bio-single-cell-markers-annotation:
+  category: single-cell
+  description: Find marker genes and annotate cell types in single-cell RNA-seq using
+    Seurat (R) and Scanpy (Python). Use for differential expression between clusters,
+    identifying cluster-specific markers, scoring gene sets, and assigning cell type
+    labels. Use when finding marker genes and annotating clusters.
+  subcategory: markers-annotation
+  version: '1.0'
+bio-single-cell-metabolite-communication:
+  category: single-cell
+  description: Analyze metabolite-mediated cell-cell communication using MeboCost
+    for metabolic signaling inference between cell types. Predict metabolite secretion
+    and sensing patterns from scRNA-seq data. Use when studying metabolic crosstalk
+    between cell populations or metabolite-receptor interactions.
+  subcategory: metabolite-communication
+  version: '1.0'
+bio-single-cell-multimodal-integration:
+  category: single-cell
+  description: Analyze multi-modal single-cell data (CITE-seq, Multiome, spatial).
+    Use when working with data that measures multiple modalities per cell like RNA
+    + protein or RNA + ATAC. Use when analyzing CITE-seq, Multiome, or other multi-modal
+    single-cell data.
+  subcategory: multimodal-integration
+  version: '1.0'
+bio-single-cell-perturb-seq:
+  category: single-cell
+  description: Analyze Perturb-seq and CROP-seq CRISPR screening data integrated with
+    scRNA-seq. Use when identifying gene function through pooled genetic perturbations
+    in single cells.
+  subcategory: perturb-seq
+  version: '1.0'
+bio-single-cell-preprocessing:
+  category: single-cell
+  description: Quality control, filtering, and normalization for single-cell RNA-seq
+    using Seurat (R) and Scanpy (Python). Use for calculating QC metrics, filtering
+    cells and genes, normalizing counts, identifying highly variable genes, and scaling
+    data. Use when filtering, normalizing, and selecting features in single-cell data.
+  subcategory: preprocessing
+  version: '1.0'
+bio-single-cell-scatac-analysis:
+  category: single-cell
+  description: Single-cell ATAC-seq analysis with Signac (R/Seurat) and ArchR. Process
+    10X Genomics scATAC data, perform QC, dimensionality reduction, clustering, peak
+    calling, and motif activity scoring with chromVAR. Use when analyzing single-cell
+    ATAC-seq data.
+  subcategory: scatac-analysis
+  version: '1.0'
+bio-single-cell-splicing:
+  category: alternative-splicing
+  description: Analyzes alternative splicing at single-cell resolution using BRIE2
+    for probabilistic PSI estimation or leafcutter2 for cluster-based analysis with
+    NMD detection. Identifies cell-type-specific splicing patterns. Use when analyzing
+    isoform usage in scRNA-seq or finding splicing differences between cell populations.
+  subcategory: single-cell-splicing
+  version: '1.0'
+bio-single-cell-trajectory-inference:
+  category: single-cell
+  description: Infer developmental trajectories and pseudotime from single-cell RNA-seq
+    data using Monocle3, Slingshot, and scVelo for RNA velocity analysis. Use when
+    inferring developmental trajectories or pseudotime.
+  subcategory: trajectory-inference
+  version: '1.0'
+bio-small-rna-seq-differential-mirna:
+  category: small-rna-seq
+  description: Perform differential expression analysis of miRNAs between conditions
+    using DESeq2 or edgeR with small RNA-specific considerations. Use when identifying
+    miRNAs that change between treatment groups, disease states, or developmental
+    stages.
+  subcategory: differential-mirna
+  version: '1.0'
+bio-small-rna-seq-mirdeep2-analysis:
+  category: small-rna-seq
+  description: Discover novel miRNAs and quantify known miRNAs using miRDeep2 de novo
+    prediction from small RNA-seq data. Use when identifying new miRNAs or performing
+    comprehensive miRNA profiling with discovery.
+  subcategory: mirdeep2-analysis
+  version: '1.0'
+bio-small-rna-seq-mirge3-analysis:
+  category: small-rna-seq
+  description: Fast miRNA quantification with isomiR detection and A-to-I editing
+    analysis using miRge3. Use when quantifying known miRNAs quickly or analyzing
+    isomiR variants and RNA editing.
+  subcategory: mirge3-analysis
+  version: '1.0'
+bio-small-rna-seq-smrna-preprocessing:
+  category: small-rna-seq
+  description: Preprocess small RNA sequencing data with adapter trimming and size
+    selection optimized for miRNA, piRNA, and other small RNAs. Use when preparing
+    small RNA-seq reads for downstream quantification or discovery analysis.
+  subcategory: smrna-preprocessing
+  version: '1.0'
+bio-small-rna-seq-target-prediction:
+  category: small-rna-seq
+  description: Predict miRNA target genes using sequence-based algorithms and database
+    lookups. Use when identifying potential mRNA targets of differentially expressed
+    or functionally important miRNAs.
+  subcategory: target-prediction
+  version: '1.0'
+bio-spatial-transcriptomics-image-analysis:
+  category: spatial-transcriptomics
+  description: Process and analyze tissue images from spatial transcriptomics data
+    using Squidpy. Extract image features, segment cells/nuclei, and compute morphological
+    features from H&E or IF images. Use when processing tissue images for spatial
+    transcriptomics.
+  subcategory: image-analysis
+  version: '1.0'
+bio-spatial-transcriptomics-spatial-communication:
+  category: spatial-transcriptomics
+  description: Analyze cell-cell communication in spatial transcriptomics data using
+    ligand-receptor analysis with Squidpy. Infer intercellular signaling, identify
+    communication pathways, and visualize interaction networks. Use when analyzing
+    cell-cell communication in spatial context.
+  subcategory: spatial-communication
+  version: '1.0'
+bio-spatial-transcriptomics-spatial-data-io:
+  category: spatial-transcriptomics
+  description: Load spatial transcriptomics data from Visium, Xenium, MERFISH, Slide-seq,
+    and other platforms using Squidpy and SpatialData. Read Space Ranger outputs,
+    convert formats, and access spatial coordinates. Use when loading Visium, Xenium,
+    MERFISH, or other spatial data.
+  subcategory: spatial-data-io
+  version: '1.0'
+bio-spatial-transcriptomics-spatial-deconvolution:
+  category: spatial-transcriptomics
+  description: Estimate cell type composition in spatial transcriptomics spots using
+    reference-based deconvolution. Use cell2location, RCTD, SPOTlight, or Tangram
+    to infer cell type proportions from scRNA-seq references. Use when estimating
+    cell type composition in spatial spots.
+  subcategory: spatial-deconvolution
+  version: '1.0'
+bio-spatial-transcriptomics-spatial-domains:
+  category: spatial-transcriptomics
+  description: Identify spatial domains and tissue regions in spatial transcriptomics
+    data using Squidpy and Scanpy. Cluster spots considering both expression and spatial
+    context to define anatomical regions. Use when identifying tissue domains or spatial
+    regions.
+  subcategory: spatial-domains
+  version: '1.0'
+bio-spatial-transcriptomics-spatial-multiomics:
+  category: spatial-transcriptomics
+  description: Analyze high-resolution spatial platforms like Slide-seq, Stereo-seq,
+    and Visium HD. Use when working with subcellular resolution or high-density spatial
+    data.
+  subcategory: spatial-multiomics
+  version: '1.0'
+bio-spatial-transcriptomics-spatial-neighbors:
+  category: spatial-transcriptomics
+  description: Build spatial neighbor graphs for spatial transcriptomics data using
+    Squidpy. Compute k-nearest neighbors, Delaunay triangulation, and radius-based
+    connectivity for downstream spatial analyses. Use when building spatial neighborhood
+    graphs.
+  subcategory: spatial-neighbors
+  version: '1.0'
+bio-spatial-transcriptomics-spatial-preprocessing:
+  category: spatial-transcriptomics
+  description: Quality control, filtering, normalization, and feature selection for
+    spatial transcriptomics data. Calculate QC metrics, filter spots/cells, normalize
+    counts, and identify highly variable genes. Use when filtering and normalizing
+    spatial transcriptomics data.
+  subcategory: spatial-preprocessing
+  version: '1.0'
+bio-spatial-transcriptomics-spatial-proteomics:
+  category: spatial-transcriptomics
+  description: Analyzes spatial proteomics data from CODEX, IMC, and MIBI platforms
+    including cell segmentation and protein colocalization. Use when working with
+    multiplexed imaging data, analyzing protein spatial patterns, or integrating spatial
+    proteomics with transcriptomics.
+  subcategory: spatial-proteomics
+  version: '1.0'
+bio-spatial-transcriptomics-spatial-statistics:
+  category: spatial-transcriptomics
+  description: Compute spatial statistics for spatial transcriptomics data using Squidpy.
+    Calculate Moran's I, Geary's C, spatial autocorrelation, co-occurrence analysis,
+    and neighborhood enrichment. Use when computing spatial autocorrelation or co-occurrence
+    statistics.
+  subcategory: spatial-statistics
+  version: '1.0'
+bio-spatial-transcriptomics-spatial-visualization:
+  category: spatial-transcriptomics
+  description: Visualize spatial transcriptomics data using Squidpy and Scanpy. Create
+    tissue plots with gene expression, clusters, and annotations overlaid on histology
+    images. Use when visualizing spatial expression patterns.
+  subcategory: spatial-visualization
+  version: '1.0'
+bio-splicing-pipeline:
+  category: workflows
+  description: End-to-end alternative splicing analysis from FASTQ to differential
+    splicing results. Aligns with STAR 2-pass mode, performs junction QC, runs rMATS-turbo
+    for differential analysis, and generates sashimi visualizations. Use when performing
+    comprehensive splicing analysis from raw RNA-seq data.
+  subcategory: splicing-pipeline
+  version: '1.0'
+bio-splicing-qc:
+  category: alternative-splicing
+  description: Assesses RNA-seq data quality for splicing analysis including junction
+    saturation curves, splice site strength scoring, and junction coverage metrics
+    using RSeQC. Use when evaluating data suitability for splicing analysis or troubleshooting
+    low event detection.
+  subcategory: splicing-qc
+  version: '1.0'
+bio-splicing-quantification:
+  category: alternative-splicing
+  description: Quantifies alternative splicing events (PSI/percent spliced in) from
+    RNA-seq using SUPPA2 from transcript TPM or rMATS-turbo from BAM files. Calculates
+    inclusion levels for skipped exons, alternative splice sites, mutually exclusive
+    exons, and retained introns. Use when measuring splice site usage or isoform ratios
+    from RNA-seq data.
+  subcategory: splicing-quantification
+  version: '1.0'
+bio-sra-data:
+  category: database-access
+  description: Download sequencing data from NCBI SRA using the SRA toolkit. Use when
+    downloading FASTQ files from SRA accessions, prefetching large datasets, or validating
+    SRA downloads.
+  subcategory: sra-data
+  version: '1.0'
+bio-structural-biology-alphafold-predictions:
+  category: structural-biology
+  description: Access and analyze AlphaFold protein structure predictions. Use when
+    predicted structures are needed for proteins without experimental structures,
+    or for confidence scores (pLDDT).
+  subcategory: alphafold-predictions
+  version: '1.0'
+bio-structural-biology-modern-structure-prediction:
+  category: structural-biology
+  description: Predict protein structures using modern ML models including AlphaFold3,
+    ESMFold, Chai-1, and Boltz-1. Use when predicting structures for novel proteins,
+    protein complexes, or when comparing predictions across multiple methods.
+  subcategory: modern-structure-prediction
+  version: '1.0'
+bio-substructure-search:
+  category: chemoinformatics
+  description: Searches molecular libraries for substructure matches using SMARTS
+    patterns with RDKit. Filters compounds by pharmacophore features, functional groups,
+    or scaffold matches with atom mapping. Use when finding compounds containing specific
+    chemical moieties or filtering libraries by structural features.
+  subcategory: substructure-search
+  version: '1.0'
+bio-systems-biology-context-specific-models:
+  category: systems-biology
+  description: Build tissue and condition-specific metabolic models using GIMME, iMAT,
+    and INIT algorithms with expression data constraints. Create models that reflect
+    cell-type specific metabolism. Use when building tissue-specific metabolic models
+    or integrating transcriptomics with FBA.
+  subcategory: context-specific-models
+  version: '1.0'
+bio-systems-biology-flux-balance-analysis:
+  category: systems-biology
+  description: Perform flux balance analysis (FBA) and flux variability analysis (FVA)
+    on genome-scale metabolic models using COBRApy. Predict growth rates, metabolic
+    fluxes, and optimal resource utilization. Use when predicting metabolic phenotypes
+    or optimizing flux distributions.
+  subcategory: flux-balance-analysis
+  version: '1.0'
+bio-systems-biology-gene-essentiality:
+  category: systems-biology
+  description: Perform in silico gene knockout analysis and synthetic lethality screens
+    using COBRApy single and double deletions. Predict essential genes and identify
+    synthetic lethal pairs for drug target discovery. Use when identifying essential
+    genes or finding synthetic lethal drug targets.
+  subcategory: gene-essentiality
+  version: '1.0'
+bio-systems-biology-metabolic-reconstruction:
+  category: systems-biology
+  description: Build genome-scale metabolic models from genome sequences using CarveMe
+    and gapseq for automated reconstruction. Generate draft models ready for curation
+    and analysis. Use when creating metabolic models for organisms without existing
+    models.
+  subcategory: metabolic-reconstruction
+  version: '1.0'
+bio-systems-biology-model-curation:
+  category: systems-biology
+  description: Validate, gap-fill, and curate genome-scale metabolic models using
+    memote for quality scores and COBRApy for manual curation. Ensure models meet
+    SBML standards and produce biologically meaningful predictions. Use when improving
+    draft models or preparing models for publication.
+  subcategory: model-curation
+  version: '1.0'
+bio-tcr-bcr-analysis-immcantation-analysis:
+  category: tcr-bcr-analysis
+  description: Analyze BCR repertoires for somatic hypermutation, clonal lineages,
+    and B cell phylogenetics using the Immcantation framework. Use when studying B
+    cell affinity maturation, germinal center dynamics, or antibody evolution.
+  subcategory: immcantation-analysis
+  version: '1.0'
+bio-tcr-bcr-analysis-mixcr-analysis:
+  category: tcr-bcr-analysis
+  description: Perform V(D)J alignment and clonotype assembly from TCR-seq or BCR-seq
+    data using MiXCR. Use when processing raw immune repertoire sequencing data to
+    identify clonotypes and their frequencies.
+  subcategory: mixcr-analysis
+  version: '1.0'
+bio-tcr-bcr-analysis-repertoire-visualization:
+  category: tcr-bcr-analysis
+  description: Create publication-quality visualizations of immune repertoire data
+    including circos plots, clone tracking, diversity plots, and network graphs. Use
+    when generating figures for repertoire comparisons, clonal dynamics, or V(D)J
+    gene usage.
+  subcategory: repertoire-visualization
+  version: '1.0'
+bio-tcr-bcr-analysis-scirpy-analysis:
+  category: tcr-bcr-analysis
+  description: Analyze single-cell TCR and BCR data integrated with gene expression
+    using scirpy. Use when working with 10x Genomics VDJ data alongside scRNA-seq
+    or when integrating immune receptor information with cell state analysis.
+  subcategory: scirpy-analysis
+  version: '1.0'
+bio-tcr-bcr-analysis-vdjtools-analysis:
+  category: tcr-bcr-analysis
+  description: Calculate immune repertoire diversity metrics, compare samples, and
+    track clonal dynamics using VDJtools. Use when analyzing repertoire diversity,
+    finding shared clonotypes, or comparing immune profiles between conditions.
+  subcategory: vdjtools-analysis
+  version: '1.0'
+bio-temporal-genomics-circadian-rhythms:
+  category: temporal-genomics
+  description: Detects circadian and ultradian rhythms in time-series omics data using
+    CosinorPy cosinor models, MetaCycle (JTK_CYCLE, ARSER), and RAIN non-parametric
+    tests. Fits cosine models to estimate phase and amplitude, tests rhythmicity significance
+    at pre-specified periods. Use when testing for 24-hour or other known-period oscillations
+    in circadian, feeding-fasting, or light-dark cycle experiments. Not for unknown-period
+    discovery (see temporal-genomics/periodicity-detection).
+  subcategory: circadian-rhythms
+  version: '1.0'
+bio-temporal-genomics-periodicity-detection:
+  category: temporal-genomics
+  description: Discovers periodic signals of unknown period in time-series omics data
+    using Lomb-Scargle periodograms (scipy), autocorrelation, and wavelet time-frequency
+    decomposition (pywt). Identifies dominant frequencies, handles irregularly sampled
+    data, and detects transient periodicity. Use when searching for periodic patterns
+    of unknown period length, analyzing cell cycle oscillations, or processing unevenly
+    spaced time-series. Not for testing known 24-hour rhythms (see temporal-genomics/circadian-rhythms).
+  subcategory: periodicity-detection
+  version: '1.0'
+bio-temporal-genomics-temporal-clustering:
+  category: temporal-genomics
+  description: Clusters genes by temporal expression profile shape using Mfuzz soft
+    clustering, TCseq, and DEGreport degPatterns. Groups co-regulated genes into shared
+    trajectory patterns via fuzzy c-means or hierarchical approaches. Use when categorizing
+    temporally dynamic genes into response groups or identifying co-expression modules
+    across time points. Requires temporally variable genes identified first (see differential-expression/timeseries-de).
+  subcategory: temporal-clustering
+  version: '1.0'
+bio-temporal-genomics-temporal-grn:
+  category: temporal-genomics
+  description: Infers dynamic gene regulatory networks from bulk time-series expression
+    data using Granger causality (statsmodels), dynGENIE3 (Extra-Trees on ODE-derived
+    expression derivatives), and dynamic Bayesian networks (bnlearn). Identifies time-delayed
+    regulatory relationships and tracks network rewiring across conditions. Use when
+    inferring causal regulatory relationships from bulk temporal expression data or
+    detecting TF influence propagation over time. Not for static co-expression networks
+    (see gene-regulatory-networks/coexpression-networks).
+  subcategory: temporal-grn
+  version: '1.0'
+bio-temporal-genomics-trajectory-modeling:
+  category: temporal-genomics
+  description: Models continuous temporal trajectories from bulk or time-resolved
+    omics data using generalized additive models (mgcv), spline regression, and changepoint
+    detection (segmented, ruptures). Fits smooth gene expression curves and tests
+    trajectory differences between conditions. Use when fitting non-linear temporal
+    models to bulk time-series data or comparing developmental trajectories across
+    conditions. Not for single-cell pseudotime (see single-cell/trajectory-inference).
+  subcategory: trajectory-modeling
+  version: '1.0'
+bio-transcription-translation:
+  category: sequence-manipulation
+  description: Transcribe DNA to RNA and translate to protein using Biopython. Use
+    when converting between DNA, RNA, and protein sequences, finding ORFs, or using
+    alternative codon tables.
+  subcategory: transcription-translation
+  version: '1.0'
+bio-tumor-fraction-estimation:
+  category: liquid-biopsy
+  description: Estimates circulating tumor DNA fraction from shallow whole-genome
+    sequencing using ichorCNA. Detects copy number alterations via HMM segmentation
+    and calculates ctDNA percentage. Requires 0.1-1x sWGS coverage. Use when quantifying
+    tumor burden from liquid biopsy or monitoring treatment response.
+  subcategory: tumor-fraction-estimation
+  version: '1.0'
+bio-uniprot-access:
+  category: database-access
+  description: Access UniProt protein database for sequences, annotations, and functional
+    information. Use when retrieving protein data, GO terms, domain annotations, or
+    protein-protein interactions.
+  subcategory: uniprot-access
+  version: '1.0'
+bio-variant-annotation:
+  category: variant-calling
+  description: Comprehensive variant annotation using bcftools annotate/csq, VEP,
+    SnpEff, and ANNOVAR. Add database annotations, predict functional consequences,
+    and assess clinical significance with MANE transcript selection and pathogenicity
+    scoring. Use when annotating variants with functional and clinical information.
+  subcategory: variant-annotation
+  version: '1.0'
+bio-variant-calling:
+  category: variant-calling
+  description: Call SNPs and indels from aligned reads using bcftools mpileup and
+    call. Use when detecting variants from BAM files or generating VCF from alignments.
+  subcategory: variant-calling
+  version: '1.0'
+bio-variant-calling-clinical-interpretation:
+  category: variant-calling
+  description: Clinical variant interpretation using ClinVar, ACMG guidelines, and
+    pathogenicity predictors. Prioritize variants for diagnostic and research applications.
+    Use when interpreting clinical significance of variants.
+  subcategory: clinical-interpretation
+  version: '1.0'
+bio-variant-calling-deepvariant:
+  category: variant-calling
+  description: Deep learning-based variant calling with Google DeepVariant. Provides
+    high accuracy for germline SNPs and indels from Illumina, PacBio, and ONT data.
+    Use when calling variants with DeepVariant deep learning caller or when highest
+    germline calling accuracy is required.
+  subcategory: deepvariant
+  version: '1.0'
+bio-variant-calling-filtering-best-practices:
+  category: variant-calling
+  description: Comprehensive variant filtering including GATK VQSR, hard filters,
+    bcftools expressions, and quality metric interpretation for SNPs and indels. Use
+    when filtering variants using GATK best practices.
+  subcategory: filtering-best-practices
+  version: '1.0'
+bio-variant-calling-joint-calling:
+  category: variant-calling
+  description: Joint genotype calling across multiple samples using GATK CombineGVCFs
+    and GenotypeGVCFs. Essential for cohort studies, population genetics, and leveraging
+    VQSR. Use when performing joint genotyping across multiple samples.
+  subcategory: joint-calling
+  version: '1.0'
+bio-variant-calling-structural-variant-calling:
+  category: variant-calling
+  description: Call structural variants (SVs) from sequencing data using Manta, Delly,
+    GRIDSS, and LUMPY. Detects deletions, insertions, inversions, duplications, and
+    translocations too large for standard SNV callers. Use when detecting structural
+    variants from short-read or long-read data and building consensus callsets.
+  subcategory: structural-variant-calling
+  version: '1.0'
+bio-variant-normalization:
+  category: variant-calling
+  description: Normalize indel representation, decompose MNPs, and split multiallelic
+    variants using bcftools norm. Use when comparing variants from different callers,
+    preparing VCF for database annotation, or merging VCFs from multiple sources.
+  subcategory: variant-normalization
+  version: '1.0'
+bio-vcf-basics:
+  category: variant-calling
+  description: View, query, and understand VCF/BCF variant files using bcftools and
+    cyvcf2. Use when inspecting variants, extracting specific fields, or understanding
+    VCF format structure.
+  subcategory: vcf-basics
+  version: '1.0'
+bio-vcf-manipulation:
+  category: variant-calling
+  description: Merge, concatenate, sort, intersect, and subset VCF files using bcftools.
+    Use when combining variant files, comparing call sets, or restructuring VCF data.
+  subcategory: vcf-manipulation
+  version: '1.0'
+bio-vcf-statistics:
+  category: variant-calling
+  description: Generate variant statistics, sample concordance, and quality metrics
+    using bcftools stats and gtcheck. Use when evaluating variant quality, comparing
+    samples, or summarizing VCF contents.
+  subcategory: vcf-statistics
+  version: '1.0'
+bio-virtual-screening:
+  category: chemoinformatics
+  description: Performs structure-based virtual screening using AutoDock Vina 1.2
+    for molecular docking. Prepares receptor PDBQT files, generates ligand conformers,
+    defines binding site boxes, and ranks compounds by predicted binding affinity.
+    Use when screening chemical libraries against a protein structure to find potential
+    binders.
+  subcategory: virtual-screening
+  version: '1.0'
+bio-workflow-management-cwl-workflows:
+  category: workflow-management
+  description: Create portable, standards-based bioinformatics pipelines with Common
+    Workflow Language (CWL). Use when building workflows that need maximum portability
+    across execution platforms, sharing pipelines with collaborators using different
+    systems, or contributing to community workflow registries.
+  subcategory: cwl-workflows
+  version: '1.0'
+bio-workflow-management-nextflow-pipelines:
+  category: workflow-management
+  description: Create scalable, containerized bioinformatics pipelines with Nextflow
+    DSL2 supporting Docker, Singularity, and cloud execution. Use when building portable
+    pipelines with container support, running workflows on cloud platforms (AWS, Google
+    Cloud), or leveraging nf-core community pipelines.
+  subcategory: nextflow-pipelines
+  version: '1.0'
+bio-workflow-management-snakemake-workflows:
+  category: workflow-management
+  description: Build reproducible bioinformatics pipelines with Snakemake using rules,
+    wildcards, and automatic dependency resolution. Use when creating Python-based
+    workflows, automating multi-step analyses with make-like dependency tracking,
+    or running pipelines on HPC clusters with SLURM.
+  subcategory: snakemake-workflows
+  version: '1.0'
+bio-workflow-management-wdl-workflows:
+  category: workflow-management
+  description: Create portable bioinformatics pipelines with Workflow Description
+    Language (WDL) using Cromwell or miniwdl execution engines. Use when running GATK
+    best practices pipelines, working with Terra/AnVIL platforms, or building workflows
+    for cloud execution on Google Cloud or AWS.
+  subcategory: wdl-workflows
+  version: '1.0'
+bio-workflows-atacseq-pipeline:
+  category: workflows
+  description: End-to-end ATAC-seq workflow from FASTQ files to differential accessibility
+    and TF footprinting. Covers alignment, peak calling with MACS3, QC metrics, and
+    optional TOBIAS footprinting. Use when running end-to-end ATAC-seq analysis from
+    FASTQ to differential accessibility.
+  subcategory: atacseq-pipeline
+  version: '1.0'
+bio-workflows-biomarker-pipeline:
+  category: workflows
+  description: End-to-end biomarker discovery workflow from expression data to validated
+    biomarker panels. Covers feature selection with Boruta/LASSO, classifier training
+    with nested CV, and SHAP interpretation. Use when building and validating diagnostic
+    or prognostic biomarker signatures from omics data.
+  subcategory: biomarker-pipeline
+  version: '1.0'
+bio-workflows-causal-genomics-pipeline:
+  category: workflows
+  description: End-to-end causal inference pipeline from GWAS summary statistics through
+    Mendelian randomization, colocalization, fine-mapping, and mediation analysis.
+    Use when performing post-GWAS causal inference to identify causal exposures, shared
+    causal variants, and mediating mechanisms.
+  subcategory: causal-genomics-pipeline
+  version: '1.0'
+bio-workflows-chipseq-pipeline:
+  category: workflows
+  description: End-to-end ChIP-seq workflow from FASTQ files to annotated peaks. Covers
+    QC, alignment, peak calling with MACS3 (or HOMER), and peak annotation with ChIPseeker.
+    Use when processing ChIP-seq data from alignment through peak annotation.
+  subcategory: chipseq-pipeline
+  version: '1.0'
+bio-workflows-clinical-trial-pipeline:
+  category: workflows
+  description: End-to-end clinical trial analysis workflow from CDISC data loading
+    through statistical testing to regulatory-compliant reporting. Covers data preparation,
+    logistic regression, categorical tests, subgroup analysis, and Table 1 generation.
+    Use when performing a complete analysis of clinical trial data.
+  subcategory: clinical-trial-pipeline
+  version: '1.0'
+bio-workflows-clip-pipeline:
+  category: workflows
+  description: End-to-end CLIP-seq analysis from FASTQ to binding sites and motif
+    enrichment. Use when analyzing protein-RNA interactions from CLIP-based methods.
+  subcategory: clip-pipeline
+  version: '1.0'
+bio-workflows-cnv-pipeline:
+  category: workflows
+  description: End-to-end copy number variant detection workflow from BAM files. Covers
+    CNVkit analysis for exome/targeted sequencing with visualization and annotation.
+    Use when detecting copy number alterations from sequencing data.
+  subcategory: cnv-pipeline
+  version: '1.0'
+bio-workflows-crispr-editing-pipeline:
+  category: workflows
+  description: End-to-end CRISPR experiment design from target selection to delivery-ready
+    constructs. Covers guide RNA design, off-target assessment, and specialized editing
+    strategies including knockouts, base editing, and HDR knockins. Use when designing
+    complete CRISPR editing experiments for gene knockout, correction, or tagging.
+  subcategory: crispr-editing-pipeline
+  version: '1.0'
+bio-workflows-crispr-screen-pipeline:
+  category: workflows
+  description: End-to-end CRISPR screen analysis from FASTQ to hit genes. Orchestrates
+    guide counting, QC, statistical analysis with MAGeCK, and hit calling with multiple
+    methods. Use when analyzing pooled CRISPR screens from count data to hit calling.
+  subcategory: crispr-screen-pipeline
+  version: '1.0'
+bio-workflows-cytometry-pipeline:
+  category: workflows
+  description: End-to-end flow cytometry workflow from FCS files to differential analysis.
+    Orchestrates compensation, transformation, gating/clustering, and statistical
+    testing with CATALYST/diffcyt. Use when processing flow or mass cytometry data
+    end-to-end.
+  subcategory: cytometry-pipeline
+  version: '1.0'
+bio-workflows-edna-pipeline:
+  category: workflows
+  description: End-to-end eDNA metabarcoding from raw amplicons to community ecology.
+    Covers QC, primer removal, denoising with OBITools3 or DADA2, contamination filtering,
+    taxonomy assignment, Hill number diversity, and constrained ordination. Use when
+    processing environmental DNA samples for biodiversity assessment or ecological
+    surveys.
+  subcategory: edna-pipeline
+  version: '1.0'
+bio-workflows-expression-to-pathways:
+  category: workflows
+  description: Workflow from differential expression results to functional enrichment
+    analysis. Covers GO, KEGG, Reactome enrichment with clusterProfiler and visualization.
+    Use when taking DE results to pathway enrichment.
+  subcategory: expression-to-pathways
+  version: '1.0'
+bio-workflows-fastq-to-variants:
+  category: workflows
+  description: End-to-end DNA sequencing workflow from FASTQ files to variant calls.
+    Covers QC, alignment with BWA, BAM processing, and variant calling with bcftools
+    or GATK HaplotypeCaller. Use when calling variants from raw sequencing reads.
+  subcategory: fastq-to-variants
+  version: '1.0'
+bio-workflows-genome-annotation-pipeline:
+  category: workflows
+  description: End-to-end genome annotation pipeline from assembled contigs to functional
+    annotation, covering repeat masking, gene prediction, and functional assignment
+    for both prokaryotic and eukaryotic genomes. Use when annotating a newly assembled
+    genome from scratch.
+  subcategory: genome-annotation-pipeline
+  version: '1.0'
+bio-workflows-genome-assembly-pipeline:
+  category: workflows
+  description: End-to-end genome assembly workflow from reads to polished assembly
+    with QC. Supports short reads (SPAdes), long reads (Flye), and hybrid approaches.
+    Use when assembling genomes from raw reads.
+  subcategory: genome-assembly-pipeline
+  version: '1.0'
+bio-workflows-grn-pipeline:
+  category: workflows
+  description: End-to-end gene regulatory network inference pipeline from processed
+    single-cell data to regulon discovery and perturbation simulation. Supports RNA-only
+    (pySCENIC) and multiome (SCENIC+) paths. Use when building gene regulatory networks
+    from single-cell transcriptomic or multiome data.
+  subcategory: grn-pipeline
+  version: '1.0'
+bio-workflows-gwas-pipeline:
+  category: workflows
+  description: End-to-end GWAS workflow from VCF to association results. Covers PLINK
+    QC, population structure correction, and association testing for case-control
+    or quantitative traits. Use when running genome-wide association studies.
+  subcategory: gwas-pipeline
+  version: '1.0'
+bio-workflows-hic-pipeline:
+  category: workflows
+  description: End-to-end Hi-C analysis workflow from contact pairs to compartments,
+    TADs, and loops. Covers cooler matrices, cooltools analysis, and visualization.
+    Use when processing Hi-C data to compartments and TADs.
+  subcategory: hic-pipeline
+  version: '1.0'
+bio-workflows-imc-pipeline:
+  category: workflows
+  description: End-to-end imaging mass cytometry workflow from raw acquisitions to
+    spatial cell analysis. Orchestrates image preprocessing, segmentation, phenotyping,
+    and spatial statistics. Use when analyzing imaging mass cytometry data end-to-end.
+  subcategory: imc-pipeline
+  version: '1.0'
+bio-workflows-longread-sv-pipeline:
+  category: workflows
+  description: End-to-end workflow for detecting structural variants from long-read
+    sequencing data. Covers ONT/PacBio alignment with minimap2 and SV calling with
+    Sniffles or cuteSV. Use when detecting structural variants from long reads.
+  subcategory: longread-sv-pipeline
+  version: '1.0'
+bio-workflows-merip-pipeline:
+  category: workflows
+  description: End-to-end MeRIP-seq analysis from FASTQ to m6A peaks and differential
+    methylation. Use when analyzing epitranscriptomic m6A modifications from immunoprecipitation
+    data.
+  subcategory: merip-pipeline
+  version: '1.0'
+bio-workflows-metabolic-modeling-pipeline:
+  category: workflows
+  description: End-to-end genome-scale metabolic modeling from genome sequence to
+    flux predictions. Covers automated reconstruction with CarveMe, model validation
+    with memote, FBA/FVA analysis, and gene essentiality prediction. Use when building
+    metabolic models or predicting metabolic phenotypes from genomic data.
+  subcategory: metabolic-modeling-pipeline
+  version: '1.0'
+bio-workflows-metabolomics-pipeline:
+  category: workflows
+  description: End-to-end metabolomics workflow from raw MS data to pathway analysis.
+    Orchestrates XCMS preprocessing, annotation, normalization, statistical analysis,
+    and pathway mapping. Use when processing LC-MS metabolomics data.
+  subcategory: metabolomics-pipeline
+  version: '1.0'
+bio-workflows-metagenomics-pipeline:
+  category: workflows
+  description: End-to-end metagenomics workflow from FASTQ to taxonomic and functional
+    profiles. Covers Kraken2 classification, Bracken abundance estimation, and HUMAnN
+    functional profiling. Use when profiling metagenomic samples.
+  subcategory: metagenomics-pipeline
+  version: '1.0'
+bio-workflows-methylation-pipeline:
+  category: workflows
+  description: End-to-end bisulfite sequencing workflow from FASTQ to differentially
+    methylated regions. Covers Bismark alignment, methylation calling, and DMR detection
+    with methylKit. Use when analyzing bisulfite sequencing data.
+  subcategory: methylation-pipeline
+  version: '1.0'
+bio-workflows-microbiome-pipeline:
+  category: workflows
+  description: End-to-end 16S amplicon workflow from FASTQ reads to differential abundance.
+    Orchestrates DADA2 ASV inference, taxonomy assignment, diversity analysis, and
+    compositional testing with ALDEx2. Use when processing 16S/ITS amplicon data.
+  subcategory: microbiome-pipeline
+  version: '1.0'
+bio-workflows-multi-omics-pipeline:
+  category: workflows
+  description: End-to-end multi-omics integration workflow. Orchestrates data harmonization,
+    MOFA/mixOmics integration, factor interpretation, and downstream analysis across
+    transcriptomics, proteomics, metabolomics, and other modalities. Use when integrating
+    multiple omics datasets.
+  subcategory: multi-omics-pipeline
+  version: '1.0'
+bio-workflows-multiome-pipeline:
+  category: workflows
+  description: End-to-end multiome workflow for joint scRNA-seq + scATAC-seq analysis.
+    Covers data loading, separate modality processing, and WNN integration with Seurat/Signac.
+    Use when analyzing joint scRNA+scATAC data.
+  subcategory: multiome-pipeline
+  version: '1.0'
+bio-workflows-neoantigen-pipeline:
+  category: workflows
+  description: End-to-end neoantigen discovery from somatic variants to ranked vaccine
+    candidates. Integrates HLA typing, MHC binding prediction, pVACtools neoantigen
+    calling, and immunogenicity scoring. Use when identifying tumor neoantigens for
+    personalized vaccine design or checkpoint biomarkers.
+  subcategory: neoantigen-pipeline
+  version: '1.0'
+bio-workflows-outbreak-pipeline:
+  category: workflows
+  description: End-to-end outbreak investigation from pathogen isolates to transmission
+    networks. Orchestrates MLST typing, AMR surveillance, phylodynamic dating, and
+    transmission inference with TransPhylo. Use when investigating disease outbreaks
+    or tracking pathogen transmission chains.
+  subcategory: outbreak-pipeline
+  version: '1.0'
+bio-workflows-proteomics-pipeline:
+  category: workflows
+  description: End-to-end proteomics workflow from MaxQuant output to differential
+    protein abundance. Orchestrates data import, normalization, imputation, and statistical
+    testing with limma (default) or MSstats for complex feature-level designs. Use
+    when processing mass spectrometry proteomics.
+  subcategory: proteomics-pipeline
+  version: '1.0'
+bio-workflows-riboseq-pipeline:
+  category: workflows
+  description: End-to-end Ribo-seq analysis from FASTQ to translation efficiency and
+    ORF detection. Use when analyzing ribosome profiling data to study translation.
+  subcategory: riboseq-pipeline
+  version: '1.0'
+bio-workflows-rnaseq-to-de:
+  category: workflows
+  description: End-to-end RNA-seq workflow from FASTQ files to differential expression
+    results. Covers QC, quantification (Salmon or STAR+featureCounts), and DESeq2
+    analysis with visualization. Use when running RNA-seq from FASTQ to DE results.
+  subcategory: rnaseq-to-de
+  version: '1.0'
+bio-workflows-scrnaseq-pipeline:
+  category: workflows
+  description: End-to-end single-cell RNA-seq workflow from 10X Genomics data to annotated
+    cell types. Covers QC, normalization, clustering, marker detection, and cell type
+    annotation. Use when analyzing single-cell RNA-seq data.
+  subcategory: scrnaseq-pipeline
+  version: '1.0'
+bio-workflows-smrna-pipeline:
+  category: workflows
+  description: End-to-end small RNA-seq analysis from FASTQ to differential miRNA
+    expression. Use when analyzing miRNA, piRNA, or other small RNA sequencing data.
+  subcategory: smrna-pipeline
+  version: '1.0'
+bio-workflows-somatic-variant-pipeline:
+  category: workflows
+  description: End-to-end somatic variant calling from tumor-normal paired samples
+    using Mutect2 or Strelka2. Covers preprocessing, variant calling, filtering, and
+    annotation for cancer genomics. Use when calling somatic mutations from tumor-normal
+    pairs.
+  subcategory: somatic-variant-pipeline
+  version: '1.0'
+bio-workflows-spatial-pipeline:
+  category: workflows
+  description: End-to-end spatial transcriptomics workflow for Visium/Xenium data.
+    Covers data loading, preprocessing, spatial analysis, domain detection, and visualization
+    with Squidpy. Use when analyzing spatial transcriptomics data.
+  subcategory: spatial-pipeline
+  version: '1.0'
+bio-workflows-tcr-pipeline:
+  category: workflows
+  description: End-to-end TCR/BCR repertoire analysis from FASTQ to clonotype diversity
+    metrics. Use when analyzing immune repertoire sequencing data from bulk or single-cell
+    experiments.
+  subcategory: tcr-pipeline
+  version: '1.0'
+bio-workflows-timecourse-pipeline:
+  category: workflows
+  description: End-to-end time-course analysis from expression matrix to temporal
+    patterns and enrichment. Covers temporal DE, Mfuzz soft clustering, optional rhythm
+    detection, GAM trajectory fitting, and per-cluster pathway enrichment. Use when
+    analyzing bulk time-series expression experiments from any omics platform.
+  subcategory: timecourse-pipeline
+  version: '1.0'
+bio-write-sequences:
+  category: sequence-io
+  description: Write biological sequences to files (FASTA, FASTQ, GenBank, EMBL) using
+    Biopython Bio.SeqIO. Use when saving sequences, creating new sequence files, or
+    outputting modified records.
+  subcategory: write-sequences
+  version: '1.0'
