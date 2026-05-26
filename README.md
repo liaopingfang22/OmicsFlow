@@ -8,18 +8,18 @@
 
 OmicsFlow 为生物信息学实验室提供从测序仪下机数据到分析报告的完整解决方案：
 
-- **17 种分析管线** 覆盖主流组学分析场景 ✅ 已实现
-- **438 个 bioSkills** 知识技能文档 ✅ 已实现
-- **6 个 AI 智能体** 事件驱动协同工作 ✅ 已实现
-- **RBAC 权限管理** — 管理员/生信人员/建库人员/查看者 ✅ 已实现
-- **华大测序仪集成** — G99、T1+、T7、i100、GridION 自动数据接入 ✅ 已实现
-- **AI 智能助手** — 自然语言推荐最佳分析管线 ✅ 已实现
-- **公共数据检索** — GEO/SRA 数据搜索下载 + PubMed 文献检索 ✅ 已实现
-- **Plotly 交互可视化** — 火山图/热图/PCA/CNV 图谱 ✅ 已实现
-- **Celery + Redis 分布式任务队列** ✅ 已实现
-- **Sugon HPC 集群适配** — PBS/Torque 作业提交 ✅ 已实现
-- **数据库优化** — UUID 主键 + 性能索引 ✅ 已实现 (migration_v020.sql)
-- **生产安全** — CORS 限制 + 密钥检查 + PID 文件管理 ✅ 已实现
+- **18 种分析管线** 覆盖主流组学分析场景 
+- **438 个 bioSkills** 知识技能文档 
+- **6 个 AI 智能体** 事件驱动协同工作 
+- **RBAC 权限管理** — 管理员/生信人员/建库人员/查看者 
+- **华大测序仪集成** — G99、T1+、T7、i100、GridION 自动数据接入
+- **AI 智能助手** — 自然语言推荐最佳分析管线
+- **公共数据检索** — GEO/SRA 数据搜索下载 + PubMed 文献检索 
+- **Plotly 交互可视化** — 火山图/热图/PCA/CNV 图谱 
+- **Celery + Redis 分布式任务队列** 
+- **Sugon HPC 集群适配** — PBS/Torque 作业提交 
+- **数据库优化** — UUID 主键 + 性能索引 
+- **生产安全** — CORS 限制 + 密钥检查 + PID 文件管理 
 
 ## 📊 分析管线
 
@@ -33,6 +33,7 @@ OmicsFlow 为生物信息学实验室提供从测序仪下机数据到分析报�
 | 16S/ITS | DADA2 + Phyloseq | 扩增子微生物组 |
 | TCR/BCR | MiXCR | 免疫组库分析 |
 | ATAC-seq | Bowtie2 + MACS3 | 染色质可及性 |
+| 单细胞 RNA-seq | Scanpy + Scrublet + CellTypist | 聚类/注释/轨迹推断 |
 | 空间转录组 | Squidpy | 空间基因表达 |
 | ChIP-seq | Bowtie2 + MACS3 + HOMER | 转录因子/组蛋白修饰 |
 | small RNA | miRDeep2 / miRge3 | miRNA 发现与定量 |
@@ -88,7 +89,7 @@ OmicsFlow 内置 6 个专用智能体，事件驱动自动协同：
 │  - 分布式执行 / GPU 队列 / 定时任务              │
 ├─────────────────────────────────────────────────┤
 │  工作流编排: Nextflow DSL2 + Singularity         │
-│  - 17 种管线 / 22 个模块 / 60+ 进程              │
+│  - 18 种管线 / 22 个模块 / 60+ 进程              │
 ├─────────────────────────────────────────────────┤
 │  AI 知识注入: bioSkills + LLM                    │
 │  - 438 个技能 / 意图识别 / 对话式分析             │
@@ -156,7 +157,7 @@ OmicsFlow/
 │   └── config.py           # 配置管理
 ├── frontend/               # React + TypeScript
 │   └── src/pages/          # 10 个页面
-├── workflows/              # 17 个 Nextflow 工作流
+├── workflows/              # 18 个 Nextflow 工作流
 ├── modules/                # 22 个模块目录 (60+ 进程)
 ├── skills/                 # 438 个 bioSkills
 ├── containers/             # Singularity 定义
@@ -195,7 +196,7 @@ OmicsFlow/
 
 ### AI 助手
 - 自然语言 → 推荐最佳管线
-- 17 种管线中英文意图识别
+- 18 种管线中英文意图识别
 - 会话上下文管理 (20 轮对话)
 
 ### 通知系统
@@ -209,7 +210,7 @@ Swagger UI: `http://localhost:8000/docs`
 ## ✅ 实现状态
 
 ### 已实现
-- [x] 17 种分析管线 (22 模块, 60+ 进程)
+- [x] 18 种分析管线 (22 模块, 60+ 进程)
 - [x] 438 个 bioSkills (118K+ 行内容)
 - [x] 6 个 AI 智能体协同
 - [x] RBAC 四角色权限 + 资源级访问控制
