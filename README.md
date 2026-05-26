@@ -2,6 +2,8 @@
 
 > 基于 bioSkills 知识库的一站式组学分析平台，支持 Singularity 容器化、Nextflow 工作流编排、Celery 分布式任务队列、HPC 集群提交、多智能体协同和 AI 辅助分析。
 
+![OmicsFlow Logo](OmicsFlow.png)
+
 ## 🧬 项目概述
 
 OmicsFlow 为生物信息学实验室提供从测序仪下机数据到分析报告的完整解决方案：
